@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>订单详情</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" href="../assets/css/page.delivery.css" />
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-inputorder">
+            <!-- header start -->
+            @@include('../include/header.html',{
+                "title":"导入订单"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="ui-input-order">
+                    <input type="text" class="ui-input" placeholder="请输入订单号">
+                    <p class="ui-text">扫描小票二维码</p>
+                </div>
+            </section>
+            <!-- container end   -->
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

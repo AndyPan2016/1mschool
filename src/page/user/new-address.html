@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>新增地址</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.manage.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-my-info">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "新增地址"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="list-block my-info-block">
+                    <ul class="no-wrap-border">
+                        <li class="item-content item-link-input">
+                            <div class="item-inner">
+                                <div class="item-title">姓名</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="请输入姓名" />
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link-input">
+                            <div class="item-inner">
+                            <div class="item-title">我是</div>
+                            <div class="item-input">
+                                <span class="m-radio-wrap">
+                                    <input type="radio" name="myis" class="radio-item" id="j-myis-a" value="1" />
+                                    <label class="j-radio-lab" for="j-myis-a">美女</label>
+                                </span>
+                                <span class="m-radio-wrap">
+                                    <input type="radio" name="myis" class="radio-item" id="j-myis-b" value="2" />
+                                    <label class="j-radio-lab" for="j-myis-b">帅哥</label>
+                                </span>
+                            </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link-input">
+                            <div class="item-inner">
+                                <div class="item-title">手机号码</div>
+                                <div class="item-input">
+                                    <input type="number" placeholder="请输入11位手机号" />
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link-input">
+                            <div class="item-inner">
+                                <div class="item-title">区域</div>
+                                <div class="item-input">
+                                    <select>
+                                        <option value="">请选择</option>
+                                        <option value="" disabled>C1(不在配送范围)</option>
+                                        <option value="">C2</option>
+                                        <option value="">C3</option>
+                                        <option value="" disabled>C4(不在配送范围)</option>
+                                        <option value="">C5</option>
+                                        <option value="">C6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link-input">
+                            <div class="item-inner">
+                                <div class="item-title">宿舍号</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="请输入宿舍号" />
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="no-wrap-border m-50">
+                        <li class="item-content item-link-input">
+                            <div class="item-inner">
+                                <div class="item-title">设为默认地址</div>
+                                <div class="item-input">
+                                    <label class="label-switch">
+                                        <input type="checkbox">
+                                        <div class="checkbox"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="item-content">
+                        <div class="item-inner full">
+                            <a href="javascript:;" class="ui-btn ui-btn-yellow-xl ui-btn-form">确认</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

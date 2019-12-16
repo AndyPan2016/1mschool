@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>订单详情</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- build:css --> 
+    <link rel="stylesheet" href="../assets/css/plugins.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <!-- endbuild -->
+    <script type="text/javascript" src="../assets/scripts/plugins/adaptive.js"></script>
+    <script type="text/javascript">
+        window['adaptive'].desinWidth = 750; // 设计图宽度 
+        // window['adaptive'].maxWidth = 480;
+        window['adaptive'].baseFont = 14; // 没有缩放时的字体大小 
+        window['adaptive'].init(); // 调用初始化方法
+    </script>
+</head>
+<body>
+    <div class="page-group">
+        <div class="page page-current">
+            @@include('../include/header.html')
+            <!--tab-->
+            <div class="m-tab">
+                <div class="buttons-tab">
+                    <a href="#tab1" class="tab-link active button"><span class="ui-tab">全部<i class="ui-icon">1</i></span></a>
+                    <a href="#tab2" class="tab-link button"><span class="ui-tab">待付款<i class="ui-icon">10</i></span></a>
+                    <a href="#tab3" class="tab-link button"><span class="ui-tab">待发货<i class="ui-icon">99</i></span></a>
+                </div>
+                <div class="content-block">
+                    <div class="tabs">
+                        <div id="tab1" class="tab active">
+                            <div class="content-block">
+                                    <p><a href="#" data-popup=".popup-about" class="open-popup">Open About Popup </a></p>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab">
+                            <div class="content-block">
+                                <p>This is tab 2 content</p>
+                            </div>
+                        </div>
+                        <div id="tab3" class="tab">
+                            <div class="content-block">
+                                <p>This is tab 3 content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--tab 结束-->
+            @@include('../include/user.footer.html')
+        </div>
+    </div>
+    
+    <div class="popup popup-about">
+        <div class="content-block">
+            <p>About</p>
+            <p><a href="#" class="close-popup">Close popup</a></p>
+            <p>Lorem ipsum dolor ...</p>
+        </div>
+    </div>
+    <!-- build:scripts -->
+    <script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/sm.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/sm-extend.js"></script>
+    <!-- endbuild -->
+    <script>
+    $(document).on('click','.popup-about', function () {
+        console.log('About Popup opened')
+    });
+    </script>
+    
+</body>
+
+</html>

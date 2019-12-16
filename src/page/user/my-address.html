@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>我的地址</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.user.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-my-address">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "我的地址"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <!-- 用户端：我的地址列表 -->
+                <ul class="ui-repeat repeat-myaddress j-touch-del">
+                    <li class="ui-repeat-item">
+                        <div class="repeat-item-wrap">
+                            <div class="delivery-food-cont">
+                                <div class="delivery-address">李小林 美女</div>
+                                <div class="delivery-userinfo">
+                                    C13 502室
+                                    <label class="userinfo-phone">17323386756</label>
+                                </div>
+                                <a href="javascript:;" class="btn-edit"></a>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="btn-del">
+                            <i class="icon-btn-delete"></i>
+                            <label class="del-txt">删除</label>
+                        </a>
+                    </li>
+                    <li class="ui-repeat-item">
+                        <div class="repeat-item-wrap">
+                            <div class="delivery-food-cont">
+                                <div class="delivery-address">
+                                    李小林 美女
+                                    <label class="type">默认地址</label>
+                                </div>
+                                <div class="delivery-userinfo">
+                                    C13 502室
+                                    <label class="userinfo-phone">17323386756</label>
+                                </div>
+                                <a href="javascript:;" class="btn-edit"></a>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="btn-del">
+                            <i class="icon-btn-delete"></i>
+                            <label class="del-txt">删除</label>
+                        </a>
+                    </li>
+                    <li class="ui-repeat-item">
+                        <div class="repeat-item-wrap">
+                            <div class="delivery-food-cont">
+                                <div class="delivery-address">
+                                    李小林 美女
+                                </div>
+                                <div class="delivery-userinfo">
+                                    C13 502室
+                                    <label class="userinfo-phone">17323386756</label>
+                                </div>
+                                <a href="javascript:;" class="btn-edit"></a>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="btn-del">
+                            <i class="icon-btn-delete"></i>
+                            <label class="del-txt">删除</label>
+                        </a>
+                    </li>
+                </ul>
+                <!-- 用户端：我的地址列表 -->
+                
+                <a href="javascript:;" class="ui-btn ui-btn-yellow-xl"  id="j-bind-sure">确认</a>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+    <script type="text/javascript" src="../assets/scripts/pages/page.user.js"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>选餐</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.user.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-choose-meal">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "选餐"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="choose-meal-wrap" id="j-choose-meal-wrap">
+                    <div class="choose-meal-searchbox">
+                        <!--search-->
+                        <div class="m-search">
+                            <div class="bar bar-header-secondary">
+                                <div class="searchbar">
+                                    <a class="searchbar-cancel">取消</a>
+                                    <div class="search-input">
+                                    <label class="icon icon-search" for="search"></label>
+                                    <input type="search" id='search' placeholder='输入关键字...'/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--search 结束-->
+                    </div>
+                    <div class="meal-type-nav">
+                        <div class="type-nav-line"></div>
+                        <div class="type-nav-wrap">
+                            <div class="nav-list-wrap" id="j-meal-type-nav">
+                                <a href="javascript:;" class="type-nav-item">全部</a>
+                                <a href="javascript:;" class="type-nav-item">快餐套饭</a>
+                                <a href="javascript:;" class="type-nav-item">特色小炒</a>
+                                <a href="javascript:;" class="type-nav-item">地方菜系</a>
+                                <a href="javascript:;" class="type-nav-item">零食小吃</a>
+                                <a href="javascript:;" class="type-nav-item active">其他</a>
+                                <a href="javascript:;" class="type-nav-item">其他</a>
+                                <a href="javascript:;" class="type-nav-item">其他</a>
+                                <a href="javascript:;" class="type-nav-item">快餐套饭</a>
+                                <a href="javascript:;" class="type-nav-item">特色小炒</a>
+                                <a href="javascript:;" class="type-nav-item">地方菜系</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal-cont">
+                        <div class="meal-business" id="j-meal-business">
+                            <!-- 此处的data-id必须与下面的产品列表项的data-id对应 -->
+                            <a href="javascript:;" class="buiness-nav-item active" data-id="ID001">
+                                <img src="../assets/images/icon/icon-main-big.png" alt="商家缩略图" class="buiness-thumb" />
+                                <span class="buiness-info">
+                                    <label class="buiness-info-name">鱼非鱼</label>
+                                    <label class="buiness-info-status">营业中</label>
+                                </span>
+                            </a>
+                            <a href="javascript:;" class="buiness-nav-item" data-id="ID002">
+                                <img src="../assets/images/icon/icon-main-big.png" alt="商家缩略图" class="buiness-thumb" />
+                                <span class="buiness-info">
+                                    <label class="buiness-info-name">川坝子川菜馆</label>
+                                    <label class="buiness-info-status">营业中</label>
+                                </span>
+                            </a>
+                            <a href="javascript:;" class="buiness-nav-item" data-id="ID003">
+                                <img src="../assets/images/icon/icon-main-big.png" alt="商家缩略图" class="buiness-thumb" />
+                                <span class="buiness-info">
+                                    <label class="buiness-info-name">川菜馆</label>
+                                    <label class="buiness-info-status rest">休息中</label>
+                                </span>
+                            </a>
+                            <a href="javascript:;" class="buiness-nav-item" data-id="ID004">
+                                <img src="../assets/images/icon/icon-main-big.png" alt="商家缩略图" class="buiness-thumb" />
+                                <span class="buiness-info">
+                                    <label class="buiness-info-name">川菜馆</label>
+                                    <label class="buiness-info-status">营业中</label>
+                                </span>
+                            </a>
+                            <a href="javascript:;" class="buiness-nav-item" data-id="ID005">
+                                <img src="../assets/images/icon/icon-main-big.png" alt="商家缩略图" class="buiness-thumb" />
+                                <span class="buiness-info">
+                                    <label class="buiness-info-name">川菜馆</label>
+                                    <label class="buiness-info-status rest">休息中</label>
+                                </span>
+                            </a>
+                            <a href="javascript:;" class="buiness-nav-item" data-id="ID006">
+                                <img src="../assets/images/icon/icon-main-big.png" alt="商家缩略图" class="buiness-thumb" />
+                                <span class="buiness-info">
+                                    <label class="buiness-info-name">川菜馆</label>
+                                    <label class="buiness-info-status">营业中</label>
+                                </span>
+                            </a>
+                            <a href="javascript:;" class="buiness-nav-item" data-id="ID007">
+                                <img src="../assets/images/icon/icon-main-big.png" alt="商家缩略图" class="buiness-thumb" />
+                                <span class="buiness-info">
+                                    <label class="buiness-info-name">川菜馆</label>
+                                    <label class="buiness-info-status">营业中</label>
+                                </span>
+                            </a>
+                            <a href="javascript:;" class="buiness-nav-item" data-id="ID008">
+                                <img src="../assets/images/icon/icon-main-big.png" alt="商家缩略图" class="buiness-thumb" />
+                                <span class="buiness-info">
+                                    <label class="buiness-info-name">川菜馆</label>
+                                    <label class="buiness-info-status">营业中</label>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="meal-product" id="j-meal-product">
+                            <!-- 此处的data-id必须与上面的商家列表项的data-id对应 -->
+                            <div class="m-product-list-item" data-id="ID001">
+                                <div class="product-buiness">
+                                    鱼非鱼<label class="buiness-status">(营业中)</label>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">1</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="m-product-list-item" data-id="ID002">
+                                <div class="product-buiness">
+                                    川坝子川菜馆<label class="buiness-status">(营业中)</label>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <a href="javascript:;" class="choose j-choose-spec">选规则</a>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="m-product-list-item" data-id="ID003">
+                                <div class="product-buiness">
+                                    川坝子川菜馆<label class="buiness-status rest">(休息中)</label>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="m-product-list-item" data-id="ID004">
+                                <div class="product-buiness">
+                                    川坝子川菜馆<label class="buiness-status rest">(休息中)</label>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript:;" class="product-info-detail">
+                                        <img src="../assets/images/icon/icon-meal-7.png" alt="产品图片" class="product-thumb" />
+                                        <label class="product-info-name">鱼排饭</label>
+                                        <label class="product-sales-volume">月销999</label>
+                                    </a>
+                                    <span class="product-info-price">
+                                        <label class="price">12.00</label>
+                                        <span class="product-handle">
+                                            <span class="m-goods-count goods-count-null">
+                                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                                <label class="count-number j-count-number">0</label>
+                                                <a href="javascript:;" class="icon-btn-add"></a>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="shopping-cart-ft" id="j-shopping-cart-ft">
+                    <i class="icon icon-cart">
+                        <font class="count">1</font>
+                    </i>
+                    <div class="ft-cont">
+                        <div class="price-all" id="j-price-all">0.00</div>
+                        <div class="price-remark">未含餐盒费和配送费</div>
+                    </div>
+                    <a href="javascript:;" class="ui-btn ui-btn-yellow-xxl" id="j-submit-mealorder">提交订单</a>
+                </div>
+
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+
+    
+    <!-- 购物车订单确认 -->
+    <div class="popup popup-shopping-cart" id="j-shopping-cart">
+        <div class="shopping-cart-hd">
+            <a href="javascript:;" class="shoping-cart-clear">清空</a>
+        </div>
+        <div class="shopping-cart-cont cart-cont-null">
+            <div class="shooping-business-cont">
+                <!--<div class="m-shopping-business">
+                    <div class="business-hd">
+                        <img src="../assets/images/icon/icon-main-big.png" alt="商家图标" class="business-thumb" />
+                        <label class="business-name">川坝子川菜馆</label>
+                    </div>
+                    <div class="goods-list">
+                        <div class="goods-item j-goods-item">
+                            <div class="goods-info-base">
+                                <img src="../assets/images/icon/icon-meal-1.png" alt="商品缩略图" class="goods-thumb" />
+                                <label class="goods-name">长寿面</label>
+                            </div>
+                            <div class="goods-info-count">
+                                <span class="m-goods-count">
+                                    <a href="javascript:;" class="icon-btn-reduce"></a>
+                                    <label class="count-number j-count-number">1</label>
+                                    <a href="javascript:;" class="icon-btn-add"></a>
+                                </span>
+                                <label class="goods-price j-goods-price">12.01</label>
+                            </div>
+                        </div>
+                        <div class="goods-item j-goods-item">
+                            <div class="goods-info-base">
+                                <img src="../assets/images/icon/icon-meal-1.png" alt="商品缩略图" class="goods-thumb" />
+                                <label class="goods-name">长寿面</label>
+                            </div>
+                            <div class="goods-info-count">
+                                <span class="m-goods-count">
+                                    <a href="javascript:;" class="icon-btn-reduce"></a>
+                                    <label class="count-number j-count-number">1</label>
+                                    <a href="javascript:;" class="icon-btn-add"></a>
+                                </span>
+                                <label class="goods-price j-goods-price">12.00</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-shopping-business">
+                    <div class="business-hd">
+                        <img src="../assets/images/icon/icon-main-big.png" alt="商家图标" class="business-thumb" />
+                        <label class="business-name">川坝子川菜馆</label>
+                    </div>
+                    <div class="goods-list">
+                        <div class="goods-item j-goods-item">
+                            <div class="goods-info-base">
+                                <img src="../assets/images/icon/icon-meal-1.png" alt="商品缩略图" class="goods-thumb" />
+                                <label class="goods-name">长寿面</label>
+                            </div>
+                            <div class="goods-info-count">
+                                <span class="m-goods-count">
+                                    <a href="javascript:;" class="icon-btn-reduce"></a>
+                                    <label class="count-number j-count-number">1</label>
+                                    <a href="javascript:;" class="icon-btn-add"></a>
+                                </span>
+                                <label class="goods-price j-goods-price">12.00</label>
+                            </div>
+                            <div class="goods-remark">
+                                <label>加个煎蛋 小份</label>
+                                <label class="remark">备注：不要茶叶蛋，要煎蛋</label>
+                            </div>
+                        </div>
+                        <div class="goods-item j-goods-item">
+                            <div class="goods-info-base">
+                                <img src="../assets/images/icon/icon-meal-1.png" alt="商品缩略图" class="goods-thumb" />
+                                <label class="goods-name">长寿面</label>
+                            </div>
+                            <div class="goods-info-count">
+                                <span class="m-goods-count">
+                                    <a href="javascript:;" class="icon-btn-reduce"></a>
+                                    <label class="count-number j-count-number">1</label>
+                                    <a href="javascript:;" class="icon-btn-add"></a>
+                                </span>
+                                <label class="goods-price j-goods-price">12.00</label>
+                            </div>
+                            <div class="goods-remark">
+                                <label>加个煎蛋 小份</label>
+                                <label class="remark">备注：不要茶叶蛋，要煎蛋</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <div class="no-shopping">
+                <div class="no-shopping-thumb">
+                    <span class="no-shopping-text">购物车空空如也~</span>
+                </div>
+            </div>
+        </div>
+        <div class="shopping-cart-ft">
+            <i class="icon icon-cart"></i>
+            <div class="ft-cont">
+                <div class="price-all" id="j-price-all">0.00</div>
+                <div class="price-remark">未含餐盒费和配送费</div>
+            </div>
+            <a href="javascript:;" class="ui-btn ui-btn-yellow-xxl">提交订单</a>
+        </div>
+    </div>
+    <!-- 购物车订单确认 -->
+
+    <!-- 选规格 start -->
+    <div class="popup popup-choose" id="j-choose-spec">
+        <div class="popup-choose-wrap">
+            <h2>请选择</h2>
+            <div class="popup-choose-type">
+                <ul class="popup-choose-food">
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl active">韭菜猪肉-1</a></li>
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl">韭菜猪肉-2</a></li>
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl">韭菜猪肉-3</a></li>
+                </ul>
+                <ul class="popup-choose-size">
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl active">小份</a></li>
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl">大份</a></li>
+                </ul>
+            </div><!--/popup-choose-type-->
+
+            <div class="popup-choose-input"><input type="text" placeholder="可选填备注(10字以内)"></div>
+            <div class="popup-handle">
+                <div class="food-wrap">
+                    <p class="food-price">12.00</p>
+                    <p class="food-name fn-nowrap"><span id="j-food-name">韭菜猪肉</span>，<span id="j-food-size">小份</span></p>
+                </div>
+                <div class="popup-add-cart">
+                    <a href="javascript:;" class="ui-btn ui-btn-yellow-xxl" id="j-add-cart">加入购物车</a>
+                    <span class="m-goods-count hide">
+                        <a href="javascript:;" class="icon-btn-reduce"></a>
+                        <label class="count-number j-count-number">1</label>
+                        <a href="javascript:;" class="icon-btn-add"></a>
+                    </span>
+                </div>
+            </div>
+        </div><!--/popup-choose-wrap-->
+    </div>
+    <!-- 选规格 end  -->
+
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+    <script type="text/javascript" src="../assets/scripts/pages/page.user.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/monitor-keyboard.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var pm = new PhoneKeyboardMonitor();
+            if(pm.isAndroid){
+                var chooseMealWrap = $('#j-choose-meal-wrap');
+                var bottom = chooseMealWrap.css('bottom');
+                pm.onShowKeyboard(function(){
+                    $('#j-shopping-cart-ft').hide();
+                    chooseMealWrap.css('bottom', '0');
+                });
+                pm.onHideKeyboard(function(){
+                    $('#j-shopping-cart-ft').show();
+                    chooseMealWrap.css('bottom', bottom+'px');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

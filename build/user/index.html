@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title></title>
+    
+    
+<!-- 页面头部引用资源及配置 -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, email=no"/>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- build:css --> 
+<link rel="stylesheet" href="../assets/css/plugins.css" />
+<link rel="stylesheet" href="../assets/css/base.css" />
+<!-- endbuild -->
+<script type="text/javascript" src="../assets/scripts/plugins/adaptive.js"></script>
+<script type="text/javascript">
+    window['adaptive'].desinWidth = 750; // 设计图宽度 
+    // window['adaptive'].maxWidth = 480;
+    window['adaptive'].baseFont = 14; // 没有缩放时的字体大小 
+    window['adaptive'].init(); // 调用初始化方法
+</script>
+<!-- 页面头部引用资源及配置 -->
+    <link rel="stylesheet" href="../assets/css/page.user.css" />
+    <link rel="stylesheet" href="../assets/scripts/plugins/sm-extend.css" />
+</head>
+<body>
+<!-- wrapper start -->
+<section class="wrapper">
+    <!-- page-wrap start -->
+    <section class="page-wrap page-index">
+        <!-- header start -->
+        <header class="header">
+    <div class="header-wrap">
+        <a href="#" class="m-arrow-left">
+            <i class="icon icon-left"></i>
+            返回
+        </a>
+        <h1 class="m-title">食堂订单</h1>
+    </div>
+</header>
+        <!-- header end   -->
+
+        <!-- container start -->
+        <section class="container">
+            <!--搜索区域 start -->
+            <section class="search-wrap">
+                <div class="loc-address"><i class="icon icon-search-loc"></i>西南政法大学</div>
+                <!-- search start -->
+                <div class="m-search">
+                    <div class="bar bar-header-secondary">
+                        <div class="searchbar">
+                            <a class="searchbar-cancel">取消</a>
+                            <div class="search-input">
+                                <label class="icon icon-search" for="search"></label>
+                                <input type="search" id='search' placeholder='输入关键字'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- search end -->
+            </section>
+            <!--搜索区域 end   -->
+
+            <!--快速进入入口 start -->
+            <nav class="quick-entry-nav">
+                <a href="#">
+                    <i class="icon icon-all"></i>
+                    <span>全部</span>
+                </a>
+                <a href="#">
+                    <i class="icon icon-meal-1"></i>
+                    <span>快餐套饭</span>
+                </a>
+                <a href="#">
+                    <i class="icon icon-meal-2"></i>
+                    <span>特色小炒</span>
+                </a>
+                <a href="#">
+                    <i class="icon icon-meal-3"></i>
+                    <span>地方菜系</span>
+                </a>
+                <a href="#">
+                    <i class="icon icon-meal-4"></i>
+                    <span>零食小吃</span>
+                </a>
+                <a href="#">
+                    <i class="icon icon-meal-5"></i>
+                    <span>饮料奶品</span>
+                </a>
+                <a href="#">
+                    <i class="icon icon-meal-6"></i>
+                    <span>包子粥店</span>
+                </a>
+                <a href="#">
+                    <i class="icon icon-meal-7"></i>
+                    <span>汤粉面食</span>
+                </a>
+            </nav>
+            <!--快速进入入口 end  -->
+
+            <section class="ad-area">
+                <div class="swiper-container" id="j-swiper-container" data-space-between='10'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../assets/images/temp/ad01.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/images/temp/ad01.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/images/temp/ad01.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!--猜我喜欢 start -->
+            <section class="like-food">
+                <div class="like-tit"><i class="icon icon-like"></i>猜我喜欢</div>
+                <ul class="ui-repeat repeat-like">
+                    <li class="ui-repeat-item">
+                        <div class="food-img"><img src="../assets/images/temp/food-img.jpg"></div>
+                        <div class="food-info">
+                            <h2 class="fn-nowrap">鱼非鱼</h2>
+                            <p class="fn-nowrap">月售：90</p>
+                        </div>
+                        <div class="food-status"><img src="../assets/images/status-open.jpg"></div>
+                    </li>
+                    <li class="ui-repeat-item">
+                        <div class="food-img"><img src="../assets/images/temp/food-img.jpg"></div>
+                        <div class="food-info">
+                            <h2 class="fn-nowrap">英雄联盟大排档</h2>
+                            <p class="fn-nowrap">月售：90</p>
+                        </div>
+                        <div class="food-status"><img src="../assets/images/status-close.jpg"></div>
+                    </li>
+                </ul><!--/repeat-like-->
+            </section>
+            <!--猜我喜欢 end   -->
+
+            <!--最近吃过 start -->
+            <section class="like-food">
+                <div class="like-tit"><i class="icon icon-like"></i>最近吃过</div>
+                <ul class="ui-repeat repeat-like">
+                    <li class="ui-repeat-item">
+                        <div class="food-img"><img src="../assets/images/temp/food-img.jpg"></div>
+                        <div class="food-info">
+                            <h2 class="fn-nowrap">鱼非鱼</h2>
+                            <p class="fn-nowrap">月售：90</p>
+                        </div>
+                        <div class="food-status"><img src="../assets/images/status-open.jpg"></div>
+                    </li>
+                    <li class="ui-repeat-item">
+                        <div class="food-img"><img src="../assets/images/temp/food-img.jpg"></div>
+                        <div class="food-info">
+                            <h2 class="fn-nowrap">英雄联盟大排档</h2>
+                            <p class="fn-nowrap">月售：90</p>
+                        </div>
+                        <div class="food-status"><img src="../assets/images/status-close.jpg"></div>
+                    </li>
+                </ul><!--/repeat-like-->
+            </section>
+            <!--最近吃过 end   -->
+
+        </section>
+        <!-- container end   -->
+
+        <!-- footer start -->
+        <!--用户端 start -->
+<footer class="footer">
+    <div class="m-toolbar">
+        <a class="m-toolbar-item active" href="#">
+            <i class="icon icon-main"></i>
+            <span>食堂订餐</span>
+        </a>
+        <a class="m-toolbar-item" href="#">
+            <i class="icon icon-note"></i>
+            <span>我的订单</span>
+        </a>
+        <a class="m-toolbar-item" href="#">
+            <i class="icon icon-me"></i>
+            <span>个人中心</span>
+        </a>
+    </div>
+</footer>
+<!--用户端 end -->
+        <!-- footer end  -->
+
+    </section>
+    <!-- page-wrap end   -->
+</section>
+<!-- wrapper end  -->
+<!-- 页面底部部引用资源 -->
+<!-- build:scripts -->
+<script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+<script type="text/javascript" src="../assets/scripts/plugins/sm.js"></script>
+<script type="text/javascript" src="../assets/scripts/plugins/sm-extend.js"></script>
+<!-- endbuild -->
+<script type="text/javascript">
+    $(function() {
+        var swiperContainer = $('#j-swiper-container');
+        swiperContainer.swiper({
+            pagination: swiperContainer.find('.swiper-pagination'),
+            //autoplay: 3000,
+        });
+    });
+</script>
+</body>
+</html>

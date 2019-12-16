@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>无网络</title>
+    @@include('../include/base.page.top.html')
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-bind-phone">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "无网络"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="m-null-block">
+                    <div class="no-network"></div>
+                    <span class="remark-txt">网络异常，请刷新页面</span>
+                    <span class="handle">
+                        <a href="javascript:;" class="handle-btn">刷新</a>
+                    </span>
+                </div>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

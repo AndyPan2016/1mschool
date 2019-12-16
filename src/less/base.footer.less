@@ -1,0 +1,93 @@
+@import "_mixins";
+/**
+ * 背景图标
+ * @path: 背景图标路径，不包括后缀名
+ * @width: 图标元素宽度
+ * @height: 图标元素高度
+ * @type: 图片大小
+ */
+.fn-icon(@name, @width, @height,@type:contain){
+  background: url('../images/icon/@{name}.png') no-repeat;
+  width: @width;
+  height: @height;
+  background-size: @type;
+}
+.footer{
+  height:100px;
+  .m-toolbar{
+    height:100px;
+    position:fixed;
+    width:100%;
+    bottom:0;
+    border-top:1px solid #ddd;
+    background:@color-white;
+    z-index:100;
+    .m-toolbar-item{
+      color:@color-999999;
+      position: relative;
+      display: table-cell;
+      width: 1%;
+      height: 2.5rem;
+      text-align: center;
+      vertical-align: middle;
+      span{
+        display:block;
+        font-size:20px;
+      }
+      &.active{
+        color:@color-333333;
+        .icon-main{
+          .fn-icon("icon-main-active", 1.35rem, 1.35rem);
+        }
+        .icon-note{
+          .fn-icon("icon-note-active", 1.35rem, 1.35rem);
+        }
+        .icon-me{
+          .fn-icon("icon-me-active", 1.35rem, 1.35rem);
+        }
+        .icon-statistics{
+          .fn-icon("icon-statistics-active", 1.35rem, 1.35rem);
+        }
+      }
+    }
+
+    .m-toolbar-scan{
+      position:absolute;
+      left:50%;
+      top:-2.0125rem;
+      margin-left:-2.0125rem;
+    }
+  }
+}
+
+
+/**************订单导出底部******************/
+.input-order{
+  width: 100%;
+  height: 165px;
+  background: #1c1b1b;
+  position: fixed;
+  bottom: 0;
+  z-index: 10500;
+  .ui-repeart{
+    .ui-repeart-item{
+      text-align: center;
+      width: 50%;
+      float: left;
+      height: 100%;
+      &.active{
+        .text{
+          color: #1aad19;
+        }
+      }
+      .icon{
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .text{
+        font-size: @font-28;
+        color: #a2a2a2;
+      }
+    }
+  }
+}

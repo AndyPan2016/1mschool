@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>订单详情</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" href="../assets/css/page.delivery.css" />
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-order page-order-history">
+            <!-- header start
+            @@include('../include/header.html',{
+                "title":"历史订单"
+            }) -->
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="today-order-box">
+                    <!--search-->
+                    <div class="m-search">
+                        <div class="bar bar-header-secondary">
+                            <div class="searchbar">
+                                <a class="searchbar-cancel">取消</a>
+                                <div class="search-input">
+                                <label class="icon icon-search" for="search"></label>
+                                <input type="search" id='search' placeholder='输入关键字...'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--search end-->
+                    <!--tab-->
+                    <div class="m-tab">
+                        <div class="buttons-tab">
+                            <a href="#tab1" class="tab-link active button"><span class="ui-tab">全部订单</span></a>
+                            <a href="#tab2" class="tab-link button"><span class="ui-tab">进行中</span></a>
+                        </div>
+                        <div class="content-block">
+                            <div class="tabs">
+                                <div id="tab1" class="tab active">
+                                    <div class="content-block tab-content-block">
+                                        <!-- <span class="loader refresh">请稍等，正在刷新数据...</span> -->
+                                        <!-- 管理者：进行中列表 -->
+                                        <ul class="ui-repeat repeat-order-history">
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">配餐中</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <a href="javascript:;" class="show-detail">...</a>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">配餐中</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">配餐中</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <a href="javascript:;" class="show-detail">...</a>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">配餐中</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">配餐中</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <a href="javascript:;" class="show-detail">...</a>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">配餐中</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- 管理者：进行中列表 -->
+                                        <span class="loader">请稍等，正在加载数据...</span>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab">
+                                    <div class="content-block tab-content-block">
+                                        <!-- 管理者：进行中列表 -->
+                                        <ul class="ui-repeat repeat-order-history">
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">配餐中</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <a href="javascript:;" class="show-detail">...</a>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">送餐中</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <a href="javascript:;" class="order-status">已支付</a>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="order-history-cont">
+                                                    <div class="order-food-item">
+                                                        <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                        <span class="food-name">
+                                                            大娘水饺
+                                                        </span>
+                                                    </div>
+                                                    <div class="food-detail-remark">
+                                                        水饺等<label class="count">3</label>份商品
+                                                    </div>
+                                                    <span class="amount-payment">实付：50.00</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- 管理者：进行中列表 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tab 结束-->
+                </div>
+            </section>
+            <!-- container end   -->
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+    <script type="text/javascript" src="../assets/scripts/pages/page.scrolls.js"></script>
+    <!-- <script type="text/javascript" src="../assets/scripts/plugins/iscroll.js"></script> -->
+    
+    <script type="text/javascript">
+        $(function(){
+            var scrollWrap = $('.tab-content-block');
+
+            /*var myScroll = new IScroll('.tab-content-block', { mouseWheel: true });
+            myScroll.on('scrollEnd', function(e){
+                console.info(e);
+                console.info('end')
+            });*/
+
+            /*scrollWrap.each(function(idx, elem){
+                elem = $(elem);
+                elem.children(0).before('<span class="loader refresh">请稍等，正在刷新数据...</span>');
+                elem.append('<span class="loader">请稍等，正在加载数据...</span>');
+            });*/
+
+            scrollEvent.onScrollDownEnd(function(){
+                var target = this;
+                console.info('end');
+                //ajax发送请求
+                $.ajax({
+                    url: 'load',
+                    data: {},
+                    error: function(err){
+                        alert(err.statusText)
+                    },
+                    success: function(){
+                        //append html到页面
+                        target.find('.repeat-order-history').append('<li>新数据填充</li>')
+                        //如果是最后一页，设置stop停止继续发送请求，如需开启，则重新设置start
+                        //scrollEvent.stop();
+                        //scrollEvent.start();
+                    }
+                });
+            });
+
+            /*scrollEvent.onScrollTopEnd(function(){
+                var target = this;
+                //ajax发送请求
+                $.ajax({
+                    url: 'refresh',
+                    data: {},
+                    error: function(err){
+                        alert(err.statusText)
+                    },
+                    success: function(){
+                        //html到页面
+                        target.find('.repeat-order-history').html('<li>刷新数据填充</li>')
+                        //数据填充完成，重置页面样式
+                        //scrollEvent.reset(target);
+                    }
+                });
+            });*/
+        });
+    </script>
+</body>
+</html>

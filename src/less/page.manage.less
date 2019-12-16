@@ -1,0 +1,210 @@
+/**
+管理端
+ */
+
+ body{
+     background: #fafafa;
+ }
+ 
+@import "_mixins.less";
+
+ .page-my-info{
+
+    .my-info-block{
+        margin: 0;
+    }
+    
+    .coupon-btm{
+        text-align: center;
+        font-size: @font-22;
+        color: @color-666666;
+        margin-top: @n70;
+        .look-disabled{
+            display: inline-block;
+            padding: 0 @n40;
+            margin-left: @n30;
+            font-size: @font-22;
+            color: @color-5ddabb;
+            border-left: 1px solid @color-999999;
+        }
+    }
+ }
+
+ /***
+统计页面
+ */
+.m-manage-data{
+    height: 310px;
+    .horizontal(#ff8c4d,#ffb85d);
+    overflow: hidden;
+    .manage-data-hd{
+        margin: 40px 40px 0 40px;
+        clear: both;
+        overflow: hidden;
+        line-height: 37px;
+        .col-left{
+            float: left;
+            font-size: 24px;
+            color: #fff;
+        }
+        .col-right{
+            float: right;
+        }
+    }
+    .manage-data-bd{
+        text-align: center;
+        margin: 40px 0 30px 0;
+        .ui-text{
+            font-size: 80px;
+            color: #fff;
+        }
+    }
+    .manage-data-ft{
+        overflow: hidden;
+        clear: both;
+        .col-left{
+            float: left;
+            font-size: 24px;
+            color: rgba(255, 255 , 255, 0.8);
+            text-align: center;
+            width: 50%;
+            font-size: @font-28;
+        }
+        .col-right{
+            float: right;
+            text-align: center;
+            width: 50%;
+            font-size: @font-28;
+            color: rgba(255, 255 , 255, 0.8);
+        }
+    }
+}
+
+.m-data-category{
+    height: 160px;
+    background: #fff;
+    overflow: hidden;
+    .ui-repeart{
+        margin-top: 40px;
+        .ui-repeart-item{
+            float: left;
+            text-align: center;
+            width: calc(100%/3);
+            border-right: 1px solid @color-dddddd;
+            &:last-child{
+                border: 0;
+            }
+            .ui-text{
+                font-size: @font-28;
+                color: @color-bbbbbb;
+            }
+            .ui-number{
+                font-size: @font-32;
+                color: @color-333333;
+                margin-top: 26px;
+                display: block;
+            }
+        }
+    }
+}
+
+.ui-line{
+    height: 30px;
+    background: #fafafa;
+}
+
+.m-moredata{
+    background: #fff;
+    height: calc(100% - 500px);
+    padding: 60px;
+    .moredata-hd{
+        .ui-title{
+            font-size: @font-36;
+            color: @color-333333;
+            font-weight: bold;
+            &::before{
+                width: 8px;
+                height: 28px;
+                background: @color-ffaf02;
+                content: "";
+                display: inline-block;
+                margin-right: 40px;
+            }
+        }
+    }
+    .moredata-bd{
+        margin-top: 40px;
+        .ui-repeart{
+            overflow: hidden;
+            clear: both;
+            .ui-repeart-item{
+                float: left;
+                width: calc(100%/3);
+                padding: 30px 0;
+                text-align: center;
+                position: relative;
+                &:nth-child(3n){
+                    &::after{
+                        display: none;
+                    }
+                }
+                &::after{
+                    height: 80px;
+                    width: 1px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: @color-dddddd;
+                    content: "";
+                    top: 50%;
+                    margin-top: -40px;
+                }
+                &:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3){
+                    &::before{
+                        display: none;
+                    }
+                }
+                &::before{
+                    height: 1px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: @color-dddddd;
+                    content: "";
+                }
+                .ui-text{
+                    font-size: @font-28;
+                    color: @color-bbbbbb;
+                }
+                .ui-number{
+                    font-size: @font-32;
+                    color: @color-333333;
+                    margin-top: 26px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/***
+我的团队
+ */
+
+.m-myteam-data{
+    height: 170px;
+    .horizontal(#ff8c4d,#ffb85d);
+    text-align: center;
+    padding-top: 30px;
+    .ui-text{
+        font-size: @font-26;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .ui-number{
+        color: #fff;
+        font-size: 60px;
+        font-weight: bold;
+    }
+}

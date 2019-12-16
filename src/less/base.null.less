@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/**
+ * 列表
+ * @authors hyh
+ * @date    2018-05-31 10:26:59
+ */
+
+@import "_mixins.less";
+
+.m-null-block{
+    width: 100%;
+    .no-business{
+        height: 510px;
+        background: url(../images/no-business.png) 0px 0px no-repeat;
+        background-size: 100%;
+    }
+    .buiness-close{
+        height: 300px;
+        background: url(../images/business-close.png) center center no-repeat;
+        background-size: 50%;
+        margin-top: 187px;
+    }
+    .no-network{
+        height: 600px;
+        background: url(../images/no-network.png) 0px 0px no-repeat;
+        background-size: 100%;
+    }
+    .no-order{
+        height: 601px;
+        background: url(../images/no-order.png) 0px 0px no-repeat;
+        background-size: 100%;
+    }
+    .no-canteen{
+        height: 590px;
+        background: url(../images/no-canteen.png) 0px 0px no-repeat;
+        background-size: 100%;
+    }
+    .remark-txt{
+        display: block;
+        line-height: 50px;
+        font-size: @font-28;
+        color: @color-666666;
+        text-align: center;
+        padding: 0 25%;
+        &.full{
+            padding: 0;
+        }
+    }
+    .handle{
+        display: block;
+        margin-top: 70px;
+        text-align: center;
+        .handle-btn{
+            display: inline-block;
+            width: 160px;
+            height: 60px;
+            border: 1px solid @brand-primary;
+            color: @brand-primary;
+            font-size: @font-26;
+            text-align: center;
+            line-height: 60px;
+            .border-radius(10px);
+        }
+    }
+}

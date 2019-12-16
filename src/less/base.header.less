@@ -1,0 +1,36 @@
+@import "_mixins";
+
+.header{
+  height:88px;
+  line-height:88px;
+
+  color:@color-white;
+
+  text-align:center;
+  font-size:@font-36;
+  position:relative;
+  .m-arrow-left{
+    position: absolute;
+    font-size:20px;
+    color:@color-white;
+    left:30px;
+    i{
+      margin-right:@n10;
+      margin-top:-1px;
+      font-weight:bold;
+    }
+  }
+  .m-title{
+    white-space: nowrap;
+  }
+
+  .header-wrap{
+    height:88px;
+    position:fixed;
+    width:100%;
+    .vertical(#2d2c33,#3b3b40);
+    padding:0 @n30;
+    top:0;
+    z-index:100;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>工作台登录</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" href="../assets/css/page.delivery.css" />
+    <style>
+        html,body{
+            height: 100%;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-login">
+            <!-- header start -->
+            @@include('../include/header.html',{
+                "title":"工作台登录"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="list-block list-block-login">
+                    <ul class="no-wrap-border">
+                        <li>
+                            <div class="item-content">
+                                <a href="javascript:;" class="yimi-logo"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content mb-50">
+                                <div class="item-media"><i class="icon icon-user"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" id="j-login-username" placeholder="请输入手机号" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-media"><i class="icon icon-lock-smaller"></i></div>
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="password" id="j-login-userpwd" placeholder="请输入登录密码" />
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <span class="m-radio-wrap min">
+                                <input type="checkbox" class="radio-item" id="j-chkbox-remember" value="1" />
+                                <label class="j-radio-lab" for="j-chkbox-remember">记住密码</label>
+                            </span>
+                            <a href="javascript:;" class="m-forget-pwd">忘记密码？</a>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner full">
+                                <a href="javascript:;" class="ui-btn ui-btn-yellow-xl ui-btn-form"  id="j-login-sure">确认</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- container end   -->
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+    <script>
+        window.onload = function(){
+            (function(){
+
+                var loginUserName = $('#j-login-username'),
+                    loginUserPwd = $('#j-login-userpwd');
+                
+                var loginSure = $('#j-login-sure');
+
+                loginSure.click(function(){
+                    if(!loginUserName.val()){
+                        $.alert('请输入用户名！', function(){
+                            loginUserName.focus();
+                        });
+                        return;
+                    }
+                    else if(!loginUserPwd.val()){
+                        $.alert('请输入登录密码！', function(){
+                            loginUserPwd.focus();
+                        });
+                        return;
+                    }
+                    // if(!loginSure.hasClass('disabled')){
+                    //     if(!loginUserName.val()){
+                    //         $.alert('请输入用户名！', function(){
+                    //             loginUserName.focus();
+                    //         });
+                    //         return;
+                    //     }
+                    //     else if(!loginUserPwd.val()){
+                    //         $.alert('请输入登录密码！', function(){
+                    //             loginUserPwd.focus();
+                    //         });
+                    //         return;
+                    //     }
+                    //     else{
+                    //         loginSure.addClass('disabled');
+                    //     }
+                    // }
+                });
+
+            })();
+        };
+    </script>
+</body>
+</html>

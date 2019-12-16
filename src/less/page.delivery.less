@@ -1,0 +1,306 @@
+@charset "UTF-8";
+/**
+ * 列表
+ * @authors hyh
+ * @date    2018-05-31 15:50:20
+ */
+
+@import "_mixins.less";
+
+/***
+配送端
+ */
+
+
+body{
+    background: @color-fafafa;
+    overflow: hidden;
+}
+
+
+/**************今日订单****************/
+.today-order-box{
+    margin-bottom: 200px;
+    .m-search{
+        padding: 20px 15px;
+        background: #fff;
+    }
+    .m-tab{
+        .content-block{
+            background: none;
+            .status-txt{
+                margin-left: 70px;
+            }    
+        }
+    }
+}
+
+/***历史订单***/
+.page-order-history{
+    .today-order-box{
+        margin: 0;
+        /*.tab{
+            position: relative;
+        }*/
+        /*.loader{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .loader, .refresh{
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+            margin-bottom: 0;
+            margin-top: -70px;
+            text-align: center;
+            font-size: 24px;
+            width: 100%;
+        }
+        .refresh{
+            position: static;
+        }*/
+        .tab-content-block{
+            overflow-y: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            //top: 300px;
+            top: 214px;
+            right: 0;
+            height: auto;
+            .repeat-order-history{
+                position: relative;
+                z-index: 1;
+            }
+            &.transition{
+                .refresh{
+                    .transition(all .2s ease);
+                }
+            }
+            &.open{
+                .refresh{
+                    margin-top: 0;
+                }
+            }
+            .loader, .refresh{
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                margin-top: 0px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 24px;
+                width: 100%;
+            }
+            .refresh{
+                display: block;
+                width: 100%;
+                height: 70px;
+                line-height: 70px;
+                margin-bottom: 0;
+                margin-top: -70px;
+            }
+        }
+    }
+}
+
+/**************订单详情****************/
+.page-orderdetail{
+    .state-box{
+        padding: 0 30px;
+        background: #fff;
+        margin-bottom: 30px;
+        .m-order-state{
+            .translate(0,-60px);
+        }
+        .m-order-detail{
+            .translate(0,-60px);
+        }
+    }
+    .m-remarks{
+        margin-bottom: 300px;
+    }
+}
+
+/**************我的****************/
+.m-mybg{
+    height: 250px;
+    .horizontal(#ff8c4d,#ffb85d);
+    &.user-my{
+        background: url(../images/user-mybg.png) no-repeat;
+        background-size: 100% auto; 
+    }
+    .m-myinformation{
+        width: 650px;
+        margin: 0 auto;
+        padding-top: 50px;
+        .col-left{
+            float: left;
+            .head-portrait{
+                display: block;
+                width: 90px;
+                height: 90px;
+                .border-radius(90px);
+                border:2px solid #fff;
+            }
+        }
+        .col-left{
+            float: left;
+            font-size: 0;
+            margin-right: 30px;
+            .ui-block{
+                display: block;
+                font-size: 0;
+                margin-top: 10px;
+                overflow: hidden;
+                .my-name{
+                    font-size: 32px;
+                    color: #fff;
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+                .my-id{
+                    font-size: 24px;
+                    color: rgba(255,255,255,0.8);
+                    display: inline-block;
+                }
+                .icon{
+                    margin-top: 10px;
+                    float: left;
+                    margin-right: 20px;
+                }
+                .my-job{
+                    font-size: 26px;
+                    color: rgba(255,255,255,0.8);
+                    margin-top: 10px;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+.m-mydata{
+    width: 690px;
+    height: 136px;
+    margin: 0 auto;
+    .border-radius(136px);
+    .box-shadow();
+    .translate(0,-68px);
+    background: #fff;
+    padding-top: 20px;
+    position: relative;
+    &::after{
+        position: absolute;
+        width: 1px;
+        height: 40px;
+        background: @color-dddddd;
+        content: '';
+        top: 50%;
+        left: 50%;
+        margin-top: -20px;
+        margin-left: -1px;
+    }
+    .big-data{
+        font-size: 44px;
+        color: @color-333333;
+    }
+    .data-name{
+        font-size: 28px;
+        color: @color-999999;
+        margin-top: 20px;
+    }
+    .icon-right{
+        margin-left: 10px;
+        &::before{
+            font-size: 20px;
+        }
+    }
+    .col-left{
+        display: block;
+        width: 50%;
+        text-align: center;
+        float: left;
+    }
+    .col-right{
+        width: 50%;
+        text-align: center;
+        float: right;
+    }
+}
+
+.m-list{
+    .list-block{
+        margin: 0;
+    }
+}
+
+.ui-input-order{
+    text-align: center;
+    .ui-input{
+        width: 620px;
+        height: 90px;
+        border:1px solid @color-dddddd;
+        .border-radius(10px);
+        margin: 0 auto;
+        text-align: center;
+        font-size: @font-28;
+        margin-top: 150px;
+        margin-bottom: 80px;
+        background: #fff;
+
+    }
+    .ui-text{
+        font-size: @font-26;
+        color: #4094fb;
+    }
+}
+
+/**************二维码弹层****************/
+.my-qrcode-layer{
+    .popup-about{
+        background: none;
+        .m-close{
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            .translate(0,-18px);
+        }
+        .m-scan-order{
+            width: 590px;
+            position: fixed;
+            left: 50%;
+            margin-left: -295px;
+            bottom: 260px;
+            .col-left{
+                float: left;
+            }
+            .col-right{
+                float: right;
+            }
+            .scan-qrcode{
+                background: url(../images/qrcode.png) no-repeat;
+                width: 240px;
+                height: 270px;
+                background-size: 240px 270px;
+                text-align: center; 
+                padding-top: 220px;
+                font-size: 26px;
+                color: @color-333333;
+            }
+            .input-ordernumber{
+                background: url(../images/search-order.png) no-repeat;
+                width: 240px;
+                height: 270px;
+                background-size: 240px 270px;
+                text-align: center; 
+                padding-top: 220px;
+                font-size: 26px;
+                color: @color-333333;
+            }
+        }
+    }
+}
+

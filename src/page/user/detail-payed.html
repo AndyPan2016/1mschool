@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>订单详情</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" href="../assets/css/page.delivery.css" />
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-orderdetail">
+            <!-- header start -->
+            @@include('../include/header.html')
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <!--订单详情顶部状态-->
+                <div class="m-state-title">
+                    已支付
+                </div>
+                <!--订单详情顶部状态 结束-->
+                <div class="state-box">
+                    <!--订单状态-->
+                    <div class="m-order-state">
+                        <ul class="ui-repeat">
+                            <li class="ui-repeat-item down">
+                                <span class="col-left">已支付</span>
+                                <span class="col-right">2018.03.01 12:09</span>
+                            </li>
+                            <li class="ui-repeat-item working">
+                                <span class="col-left">待配送</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:" class="ui-custom-service"><i class="icon icon-service-no"></i></a>
+                    </div>
+                    <!--订单状态 结束-->
+                    <!--订单-->
+                    <div class="m-order-detail">
+                            <div class="m-userinformation">
+                                <div class="ui-itle-hd">
+                                    <i class="ui-icon"></i>
+                                    <h3 class="ui-title">C13 502室</h3>
+                                </div>
+                                <div class="userinformation-bd">
+                                    <p class="ui-name">李小林</p>
+                                    <p class="ui-sex">美女</p>
+                                    <p class="ui-phonenumber">17323386756</p>
+                                </div>
+                            </div>
+                            <div class="m-orderinformation">
+                                <div class="ui-itle-hd">
+                                    <i class="ui-icon"></i>
+                                    <h3 class="ui-title">订餐信息</h3>
+                                </div>
+                                <div class="orderinformation-bd">
+                                    <div class="shop-information">
+                                        <div class="m-shop-hd">
+                                            <span class="ui-logo">
+                                                <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2531975766,2518958733&fm=58&bpow=690&bpoh=690">
+                                            </span>
+                                            <p class="ui-name">大娘水饺</p>
+                                        </div>
+                                        <div class="m-shop-bd">
+                                            <ul class="ui-repeat">
+                                                <li class="ui-repeat-item">
+                                                    <span class="col">
+                                                        <p class="col-left">水饺</p>
+                                                        <p class="col-right">12.00</p>
+                                                    </span>
+                                                    <span class="col category">
+                                                        <p class="col-left">韭菜鸡蛋</p>
+                                                        <p class="col-right">x1</p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="shop-information">
+                                        <div class="m-shop-hd">
+                                            <span class="ui-logo">
+                                                <img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2531975766,2518958733&fm=58&bpow=690&bpoh=690">
+                                            </span>
+                                            <p class="ui-name">大娘水饺</p>
+                                        </div>
+                                        <div class="m-shop-bd">
+                                            <ul class="ui-repeat">
+                                                <li class="ui-repeat-item">
+                                                    <span class="col">
+                                                        <p class="col-left">水饺</p>
+                                                        <p class="col-right">12.00</p>
+                                                    </span>
+                                                    <span class="col category">
+                                                        <p class="col-left">韭菜鸡蛋</p>
+                                                        <p class="col-right">x1</p>
+                                                    </span>
+                                                </li>
+                                                <li class="ui-repeat-item">
+                                                    <span class="col">
+                                                        <p class="col-left">水饺</p>
+                                                        <p class="col-right">12.00</p>
+                                                    </span>
+                                                    <span class="col category">
+                                                        <p class="col-left">韭菜鸡蛋</p>
+                                                        <p class="col-right">x1</p>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="settlement-detail">
+                                        <ul class="ui-repeat">
+                                            <li class="ui-repeat-item">
+                                                <span class="col-left">餐盒费</span>
+                                                <span class="col-right">2.00</span>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <span class="col-left">配送费</span>
+                                                <span class="col-right">2.00</span>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <span class="col-left">选择优惠券</span>
+                                                <span class="col-right color-red">-2.00</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="orderinformation-ft">
+                                        实付：50.00
+                                </div>
+                            </div>
+                        </div>
+                    <!--订单 结束-->
+                </div>
+                <!--订单备注-->
+                <div class="m-remarks">
+                    <ul class="ui-repeat">
+                        <li class="ui-repeat-item">
+                            <span class="col-left">备注</span>
+                            <span class="col-right">不要辣不要辣不要辣不要辣不要辣</span>
+                        </li>
+                        <li class="ui-repeat-item">
+                            <span class="col-left">订单号</span>
+                            <span class="col-right">1233312209876543211</span>
+                        </li>
+                        <li class="ui-repeat-item">
+                            <span class="col-left">支付方式</span>
+                            <span class="col-right">微信支付</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--订单备注 结束-->
+            </section>
+            <!-- container end   -->
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

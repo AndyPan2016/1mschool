@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>我要吐槽</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.user.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-my-info">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "我要吐槽"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="list-block block-complaints">
+                    <div class="item-content">
+                        <textarea placeholder="请留下您宝贵的建议，我们会做的更好！（至少6个字符）"></textarea>
+                    </div>
+                    <div class="content-block-title">请留下您的联系方式，方便我们更好的服务您</div>
+                    <div class="item-content">
+                        <input type="text" class="ui-input" />
+                    </div>
+                    <div class="item-content">
+                        <div class="item-inner full">
+                            <a href="javascript:;" class="ui-btn ui-btn-yellow-xl ui-btn-form">确认</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

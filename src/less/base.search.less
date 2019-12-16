@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/**
+ * 列表
+ * @authors hyh
+ * @date    2018-05-31 13:51:59
+ */
+
+@import "_mixins.less";
+.m-search{
+    .bar{
+        padding: 0;
+        top: 0;
+        background: none;
+        position: relative;
+        height: initial;
+        &::after{
+            display: none;
+        }
+        .searchbar{
+            background: none;
+            margin: 0;
+            padding: 0;
+            height: initial;
+            padding-right: 2px;
+            .searchbar-cancel{
+                height: 70px;
+                line-height: 70px;
+                font-size: @font-28;
+            }
+            .search-input{
+                input{
+                    height: 70px;
+                    line-height: 70px;
+                    .border-radius(70px);
+                    border: 1px solid @brand-primary;
+                    background: none;
+                    font-size: @font-28;
+                    padding-right: 60px;
+                   &::placeholder{
+                      color:@color-dddddd
+                    }
+                }
+                .clear-inp{
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    position: absolute;
+                    right: 10px;
+                    top: 5px;
+                    /*font-size: 24px;
+                    text-align: center;
+                    line-height: 20px;
+                    color: @color-999999;
+                    border: 1px solid @color-999999;
+                    .border-radius(30px);*/
+                    background: url(../images/icon/icon-search-clear.png) center center no-repeat;
+                    background-size: 30px 30px;
+                    cursor: pointer;
+                    .opacity(0);
+                    z-index: 10;
+                    .transition(all .3s ease);
+                    &.show{
+                        .opacity(1);
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
+    .search-nodata{
+        display: none;
+        font-size: @font-28;
+        color: @color-666666;
+        text-align: center;
+        padding-top: 112px;
+    }
+    &.show-tip{
+        .search-nodata{
+            display: block;
+        }
+    }
+}

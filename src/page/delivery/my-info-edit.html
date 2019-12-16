@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>我的信息-编辑</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.manage.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-my-info">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "我的信息-编辑"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="list-block my-info-block">
+                    <ul class="no-wrap-border">
+                        <li class="item-content item-link-input">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">用户ID</div>
+                            <div class="item-after">9527</div>
+                        </div>
+                        </li>
+                        <li class="item-content item-link">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">我的学校</div>
+                            <div class="item-after">重庆大学</div>
+                        </div>
+                        </li>
+                        <li class="item-content item-link-input">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">真实姓名</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="请输入姓名" />
+                            </div>
+                        </div>
+                        </li>
+                        <li class="item-content item-link">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">性别</div>
+                            <div class="item-input">
+                                <select>
+                                    <option class="place-select">请选择</option>
+                                    <option>美女</option>
+                                    <option>帅哥</option>
+                                </select>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="item-content item-link">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">绑定手机</div>
+                            <div class="item-after">13749928376</div>
+                        </div>
+                        </li>
+                        <li class="item-content item-link">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">绑定手机</div>
+                            <div class="item-after">
+                                <label class="no-value">未绑定</label>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

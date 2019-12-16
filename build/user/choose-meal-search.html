@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>选餐</title>
+    
+<!-- 页面头部引用资源及配置 -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, email=no"/>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- build:css --> 
+<link rel="stylesheet" href="../assets/css/plugins.css" />
+<link rel="stylesheet" href="../assets/css/base.css" />
+<!-- endbuild -->
+<script type="text/javascript" src="../assets/scripts/plugins/adaptive.js"></script>
+<script type="text/javascript">
+    window['adaptive'].desinWidth = 750; // 设计图宽度 
+    // window['adaptive'].maxWidth = 480;
+    window['adaptive'].baseFont = 14; // 没有缩放时的字体大小 
+    window['adaptive'].init(); // 调用初始化方法
+</script>
+<!-- 页面头部引用资源及配置 -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.user.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-choose-meal">
+            <!-- header start -->
+            <header class="header">
+    <div class="header-wrap">
+        <a href="#" class="m-arrow-left">
+            <i class="icon icon-left"></i>
+            返回
+        </a>
+        <h1 class="m-title">选餐-搜索</h1>
+    </div>
+</header>
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="choose-meal-wrap" id="j-choose-meal-wrap">
+                    <div class="choose-meal-searchbox">
+                        <!--search-->
+                        <div class="m-search">
+                            <div class="bar bar-header-secondary">
+                                <div class="searchbar">
+                                    <a class="searchbar-cancel">取消</a>
+                                    <div class="search-input">
+                                        <label class="icon icon-search" for="search"></label>
+                                        <input type="search" id='search' placeholder='输入关键字...' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--search 结束-->
+                    </div>
+                </div>
+                
+                <div class="shopping-cart-ft" id="j-shopping-cart-ft">
+                    <i class="icon icon-cart">
+                        <font class="count">1</font>
+                    </i>
+                    <div class="ft-cont">
+                        <div class="price-all" id="j-price-all">0.00</div>
+                        <div class="price-remark">未含餐盒费和配送费</div>
+                    </div>
+                    <a href="javascript:;" class="ui-btn ui-btn-yellow-xxl" id="j-submit-mealorder">提交订单</a>
+                </div>
+
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+
+    
+    <!-- 购物车订单确认 -->
+    <div class="popup popup-shopping-cart" id="j-shopping-cart">
+        <div class="shopping-cart-hd">
+            <a href="javascript:;" class="shoping-cart-clear">清空</a>
+        </div>
+        <div class="shopping-cart-cont">
+            <div class="m-shopping-business">
+                <div class="business-hd">
+                    <img src="../assets/images/icon/icon-main-big.png" alt="商家图标" class="business-thumb" />
+                    <label class="business-name">川坝子川菜馆</label>
+                </div>
+                <div class="goods-list">
+                    <div class="goods-item j-goods-item">
+                        <div class="goods-info-base">
+                            <img src="../assets/images/icon/icon-meal-1.png" alt="商品缩略图" class="goods-thumb" />
+                            <label class="goods-name">长寿面</label>
+                        </div>
+                        <div class="goods-info-count">
+                            <span class="m-goods-count">
+                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                <label class="count-number j-count-number">1</label>
+                                <a href="javascript:;" class="icon-btn-add"></a>
+                            </span>
+                            <label class="goods-price j-goods-price">12.01</label>
+                        </div>
+                    </div>
+                    <div class="goods-item j-goods-item">
+                        <div class="goods-info-base">
+                            <img src="../assets/images/icon/icon-meal-1.png" alt="商品缩略图" class="goods-thumb" />
+                            <label class="goods-name">长寿面</label>
+                        </div>
+                        <div class="goods-info-count">
+                            <span class="m-goods-count">
+                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                <label class="count-number j-count-number">1</label>
+                                <a href="javascript:;" class="icon-btn-add"></a>
+                            </span>
+                            <label class="goods-price j-goods-price">12.00</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-shopping-business">
+                <div class="business-hd">
+                    <img src="../assets/images/icon/icon-main-big.png" alt="商家图标" class="business-thumb" />
+                    <label class="business-name">川坝子川菜馆</label>
+                </div>
+                <div class="goods-list">
+                    <div class="goods-item j-goods-item">
+                        <div class="goods-info-base">
+                            <img src="../assets/images/icon/icon-meal-1.png" alt="商品缩略图" class="goods-thumb" />
+                            <label class="goods-name">长寿面</label>
+                        </div>
+                        <div class="goods-info-count">
+                            <span class="m-goods-count">
+                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                <label class="count-number j-count-number">1</label>
+                                <a href="javascript:;" class="icon-btn-add"></a>
+                            </span>
+                            <label class="goods-price j-goods-price">12.00</label>
+                        </div>
+                        <div class="goods-remark">
+                            <label>加个煎蛋 小份</label>
+                            <label class="remark">备注：不要茶叶蛋，要煎蛋</label>
+                        </div>
+                    </div>
+                    <div class="goods-item j-goods-item">
+                        <div class="goods-info-base">
+                            <img src="../assets/images/icon/icon-meal-1.png" alt="商品缩略图" class="goods-thumb" />
+                            <label class="goods-name">长寿面</label>
+                        </div>
+                        <div class="goods-info-count">
+                            <span class="m-goods-count">
+                                <a href="javascript:;" class="icon-btn-reduce"></a>
+                                <label class="count-number j-count-number">1</label>
+                                <a href="javascript:;" class="icon-btn-add"></a>
+                            </span>
+                            <label class="goods-price j-goods-price">12.00</label>
+                        </div>
+                        <div class="goods-remark">
+                            <label>加个煎蛋 小份</label>
+                            <label class="remark">备注：不要茶叶蛋，要煎蛋</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shopping-cart-ft">
+            <i class="icon icon-cart"></i>
+            <div class="ft-cont">
+                <div class="price-all" id="j-price-all">0.00</div>
+                <div class="price-remark">未含餐盒费和配送费</div>
+            </div>
+            <a href="javascript:;" class="ui-btn ui-btn-yellow-xxl">提交订单</a>
+        </div>
+    </div>
+    <!-- 购物车订单确认 -->
+
+    <!-- 选规格 start -->
+    <div class="popup popup-choose" id="j-choose-spec">
+        <div class="popup-choose-wrap">
+            <h2>请选择</h2>
+            <div class="popup-choose-type">
+                <ul class="popup-choose-food">
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl active">韭菜猪肉-1</a></li>
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl">韭菜猪肉-2</a></li>
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl">韭菜猪肉-3</a></li>
+                </ul>
+                <ul class="popup-choose-size">
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl active">小份</a></li>
+                    <li><a href="javascript:;" class="ui-btn ui-btn-yellow-bd-xxl">大份</a></li>
+                </ul>
+            </div><!--/popup-choose-type-->
+
+            <div class="popup-choose-input"><input type="text" placeholder="可选填备注(10字以内)"></div>
+            <div class="popup-handle">
+                <div class="food-wrap">
+                    <p class="food-price">12.00</p>
+                    <p class="food-name fn-nowrap"><span id="j-food-name">韭菜猪肉</span>，<span id="j-food-size">小份</span></p>
+                </div>
+                <div class="popup-add-cart">
+                    <a href="javascript:;" class="ui-btn ui-btn-yellow-xxl" id="j-add-cart">加入购物车</a>
+                    <span class="m-goods-count hide">
+                        <a href="javascript:;" class="icon-btn-reduce"></a>
+                        <label class="count-number j-count-number">1</label>
+                        <a href="javascript:;" class="icon-btn-add"></a>
+                    </span>
+                </div>
+            </div>
+        </div><!--/popup-choose-wrap-->
+    </div>
+    <!-- 选规格 end  -->
+
+    <!-- wrapper end  -->
+    <!-- 页面底部部引用资源 -->
+<!-- build:scripts -->
+<script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+<script type="text/javascript" src="../assets/scripts/plugins/sm.js"></script>
+<script type="text/javascript" src="../assets/scripts/plugins/sm-extend.js"></script>
+<!-- endbuild -->
+    <script type="text/javascript" src="../assets/scripts/pages/page.user.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/monitor-keyboard.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var pm = new PhoneKeyboardMonitor();
+            if(pm.isAndroid){
+                var chooseMealWrap = $('#j-choose-meal-wrap');
+                var bottom = chooseMealWrap.css('bottom');
+                pm.onShowKeyboard(function(){
+                    $('#j-shopping-cart-ft').hide();
+                    chooseMealWrap.css('bottom', '0');
+                });
+                pm.onHideKeyboard(function(){
+                    $('#j-shopping-cart-ft').show();
+                    chooseMealWrap.css('bottom', bottom+'px');
+                });
+            }
+            
+        });
+    </script>
+</body>
+</html>

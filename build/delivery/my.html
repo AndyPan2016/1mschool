@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>订单详情</title>
+    
+<!-- 页面头部引用资源及配置 -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, email=no"/>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- build:css --> 
+<link rel="stylesheet" href="../assets/css/plugins.css" />
+<link rel="stylesheet" href="../assets/css/base.css" />
+<!-- endbuild -->
+<script type="text/javascript" src="../assets/scripts/plugins/adaptive.js"></script>
+<script type="text/javascript">
+    window['adaptive'].desinWidth = 750; // 设计图宽度 
+    // window['adaptive'].maxWidth = 480;
+    window['adaptive'].baseFont = 14; // 没有缩放时的字体大小 
+    window['adaptive'].init(); // 调用初始化方法
+</script>
+<!-- 页面头部引用资源及配置 -->
+    <link rel="stylesheet" href="../assets/css/page.delivery.css" />
+    <style>
+        body{
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-order">
+            <!-- header start -->
+            <header class="header">
+    <div class="header-wrap">
+        <a href="#" class="m-arrow-left">
+            <i class="icon icon-left"></i>
+            返回
+        </a>
+        <h1 class="m-title">我的</h1>
+    </div>
+</header>
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="m-mybg">
+                    <div class="m-myinformation">
+                        <div class="col-left">
+                            <i class="icon icon-main-big head-portrait"></i>
+                        </div>
+                        <div class="col-left">
+                            <span class="ui-block">
+                                <h3 class="my-name">小不点儿</h3>
+                                <p class="my-id">ID：098765546</p>
+                            </span>
+                            <span class="ui-block">
+                                <p class="my-job">配送员</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-mydata">
+                    <span class="col-left">
+                        <h3 class="big-data">20.00</h3>
+                        <p class="data-name">本日报酬</p>
+                    </span>
+                    <span class="col-right">
+                        <h3 class="big-data">120.00</h3>
+                        <p class="data-name">上周累计报酬</p>
+                    </span>
+                </div>
+                <div class="m-list">
+                    <div class="list-block">
+                        <ul class="no-border">
+                            <li class="item-content item-link">
+                                <div class="item-media"><i class="icon icon-book"></i></div>
+                                <a href="javascript:;" class="item-inner">
+                                    <div class="item-title">我的账本</div>
+                                </a>
+                            </li>
+                            <li class="item-content item-link">
+                                <div class="item-media"><i class="icon icon-note-1"></i></div>
+                                <a href="javascript:;" class="item-inner">
+                                    <div class="item-title">历史配送订单</div>
+                                </a>
+                            </li>
+                            <li class="item-content item-link">
+                                <div class="item-media"><i class="icon icon-help"></i></div>
+                                <a href="javascript:;" class="item-inner">
+                                    <div class="item-title">联系客服</div>
+                                </a>
+                            </li>
+                            <li class="item-content item-link">
+                                <div class="item-media"><i class="icon icon-lock-small"></i></div>
+                                <a href="javascript:;" class="item-inner">
+                                    <div class="item-title">修改密码</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--layer-->
+            <div class="my-qrcode-layer">
+                <div class="popup popup-about">
+                    <div class="m-scan-order">
+                        <div class="col-left scan-qrcode">扫描小票二维码</div>
+                        <div class="col-right input-ordernumber">输入订单号</div>
+                    </div>
+                    <div class="m-close">
+                        <i class="icon icon-qrcode-close close-popup"></i>
+                    </div>
+                </div>
+            </div>
+            <!--layer end-->
+            <!-- container end   -->
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!--配送端 start -->
+<footer class="footer" id="j-delivery-footer">
+    <div class="m-toolbar">
+        <a class="m-toolbar-item active" href="#">
+            <i class="icon icon-note"></i>
+            <span>今日订单</span>
+        </a>
+        <a class="m-toolbar-item" href="#">
+            <i class="icon icon-me"></i>
+            <span>个人中心</span>
+        </a>
+        <a class="m-toolbar-scan" href="#">
+            <i class="icon icon-scan"></i>
+        </a>
+    </div>
+</footer>
+<!--配送端 end -->
+
+    <!-- wrapper end  -->
+    <!-- 页面底部部引用资源 -->
+<!-- build:scripts -->
+<script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+<script type="text/javascript" src="../assets/scripts/plugins/sm.js"></script>
+<script type="text/javascript" src="../assets/scripts/plugins/sm-extend.js"></script>
+<!-- endbuild -->
+    <script>
+        $(".icon-scan").on("click",function(){
+            $.popup('.popup-about');
+        })
+    </script>
+</body>
+</html>

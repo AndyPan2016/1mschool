@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>我的订单</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.user.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-my-order">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "我的订单"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="m-tab">
+                    <div class="buttons-tab">
+                        <a href="#j-order-all" class="tab-link active button"><span class="ui-tab">全部订单</span></a>
+                        <a href="#j-order-haveinhand" class="tab-link button"><span class="ui-tab">进行中</span></a>
+                    </div>
+                    <div class="content-block">
+                        <div class="tabs">
+                            <div id="j-order-all" class="tab active">
+                                <div class="content-block">
+                                    <!-- 用户端：我的订单列表 -->
+                                    <ul class="ui-repeat repeat-myorder">
+                                        <li class="ui-repeat-item">
+                                            <div class="m-order-info">
+                                                <a href="javascript:;" class="order-status fc-black">配餐中</a>
+                                                <span class="order-number">
+                                                    <label class="col-lab">订单时间：</label>
+                                                    <label class="col-txt">2018年6月22日14:20:30</label>
+                                                </span>
+                                            </div>
+                                            <div class="order-history-cont">
+                                                <!--<a href="javascript:;" class="order-status">配餐中</a>-->
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <a href="javascript:;" class="show-detail">...</a>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                            <div class="myorder-handle">
+                                                <a href="tel:8008208820" class="tel-btn">联系客服</a>
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="m-order-info">
+                                                <a href="javascript:;" class="order-status">送餐中</a>
+                                                <span class="order-number">
+                                                    <label class="col-lab">订单时间：</label>
+                                                    <label class="col-txt">2018年6月22日14:20:30</label>
+                                                </span>
+                                            </div>
+                                            <div class="order-history-cont">
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                            <div class="myorder-handle">
+                                                <a href="tel:8008208820" class="tel-btn">联系客服</a>
+                                                <a href="tel:8008208820" class="tel-btn dinning">联系送餐员</a>
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="m-order-info">
+                                                <a href="javascript:;" class="order-status complate">已完成</a>
+                                                <span class="order-number">
+                                                    <label class="col-lab">订单时间：</label>
+                                                    <label class="col-txt">2018年6月22日14:20:30</label>
+                                                </span>
+                                            </div>
+                                            <div class="order-history-cont">
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="order-history-cont">
+                                                <a href="javascript:;" class="order-status complate">已完成</a>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="order-history-cont">
+                                                <a href="javascript:;" class="order-status complate">已完成</a>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- 用户端：我的订单列表 -->
+                                </div>
+                            </div>
+                            <div id="j-order-haveinhand" class="tab">
+                                <div class="content-block">
+                                    <!-- 用户端：我的订单列表 -->
+                                    <ul class="ui-repeat repeat-myorder">
+                                        <li class="ui-repeat-item">
+                                            <div class="order-history-cont">
+                                                <a href="javascript:;" class="order-status complate">已完成</a>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="order-history-cont">
+                                                <a href="javascript:;" class="order-status complate">已完成</a>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="order-history-cont">
+                                                <a href="javascript:;" class="order-status complate">已完成</a>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="order-history-cont">
+                                                <a href="javascript:;" class="order-status">配餐中</a>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <a href="javascript:;" class="show-detail">...</a>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                            <div class="myorder-handle">
+                                                <a href="tel:8008208820" class="tel-btn">联系客服</a>
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="order-history-cont">
+                                                <a href="javascript:;" class="order-status">送餐中</a>
+                                                <div class="order-food-item">
+                                                    <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                    <span class="food-name">
+                                                        大娘水饺
+                                                    </span>
+                                                </div>
+                                                <div class="food-detail-remark">
+                                                    水饺等<label class="count">3</label>份商品
+                                                </div>
+                                                <span class="amount-payment">实付：50.00</span>
+                                            </div>
+                                            <div class="myorder-handle">
+                                                <a href="tel:8008208820" class="tel-btn">联系客服</a>
+                                                <a href="tel:8008208820" class="tel-btn dinning">联系送餐员</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- 用户端：我的订单列表 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            @@include('../include/user.footer.html')
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

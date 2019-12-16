@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>选择学校</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.user.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-choose-school">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "选择学校"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="current-position">
+                    <i class="icon icon-location-small"></i>
+                    <label class="location-txt">当前定位：西南政法大学</label>
+                </div>
+                <span class="position-other-tip">其他已开通学校</span>
+                <ul class="ui-repeat ui-repeat-position">
+                    <li class="ui-repeat-item">
+                        <a href="javascript:;" class="repeat-item-link">
+                            西南大学
+                        </a>
+                    </li>
+                    <li class="ui-repeat-item">
+                        <a href="javascript:;" class="repeat-item-link">
+                            四川外语学院
+                        </a>
+                    </li>
+                    <li class="ui-repeat-item">
+                        <a href="javascript:;" class="repeat-item-link">
+                            四川美术学院
+                        </a>
+                    </li>
+                    <li class="ui-repeat-item">
+                        <a href="javascript:;" class="repeat-item-link">
+                            重庆邮电大学
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

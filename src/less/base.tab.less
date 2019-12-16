@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/**
+ * 列表
+ * @authors hyh
+ * @date    2018-05-31 10:26:59
+ */
+
+@import "_mixins.less";
+
+.m-tab{
+    /***********切换项************/
+    .buttons-tab{
+        height: 100px;
+        &::after{
+            background-color: @color-dddddd;
+        }
+        .tab-link{
+            height: 100%;
+            line-height: 100px;
+            border: 0;
+            .ui-tab{
+                height: 100%;
+                line-height: 100px;
+                font-size: @font-30;
+                color: @color-666666;
+                position: relative;
+                display: inline-block;
+                .ui-icon{
+                    position: absolute;
+                    min-width: 28px;
+                    height: 30px;
+                    line-height: 30px;
+                    display: block;
+                    font-size: @font-22;
+                    background: red;
+                    color: #fff;
+                    .border-radius(30px);
+                    padding: 0 5px;
+                    top: 20px;
+                    right: -36px;
+                }
+                &::after{
+                    height: 4px;
+                    width: 124px;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    background: @brand-primary;
+                    left: 50%;
+                    margin-left: -62px;
+                    display: none;
+                }
+            }
+            &.active{
+                z-index: 10;
+                .ui-tab{
+                    color: @brand-primary;
+                    &::after{
+                        display: block;
+                    }
+                }
+            }
+        }
+        
+    }
+    /***********切换内容************/
+    .content-block{
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        min-height: 500px;
+    }
+}

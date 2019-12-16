@@ -1,0 +1,120 @@
+.ui-btn{
+  border: 0;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0 0.5rem;
+  margin: 0;
+  white-space: nowrap;
+  position: relative;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  border-radius:0.25rem;
+  color:#fff;
+  &:active{
+    color:#fff;
+  }
+}
+
+.ui-btn-yellow-xl{
+  background:#FF7C25;
+  font-size:0.8rem;
+  height:2.2rem;
+  line-height:2.2rem;
+}
+.ui-btn-yellow-xxl{
+  display:inline-block;
+  background:#FF7C25;
+  font-size:0.75rem;
+  height:2.5rem;
+  line-height:2.5rem;
+  padding:0 1rem;
+  border-radius:0;
+}
+
+.ui-btn-yellow-l{
+  background:#FF7C25;
+  display:inline-block;
+  height:1rem;
+  line-height:1rem;
+  font-size:0.55rem;
+  padding:0 0.425rem;
+}
+
+.ui-btn-disabled{
+  background:#ddd;
+  height:2.2rem;
+  line-height:2.2rem;
+  cursor: not-allowed;
+}
+
+.ui-btn-yellow-bd-xl{
+  border:1px solid #FFAF02;
+  height:1.25rem;
+  line-height:1.25rem;
+  font-size:0.65rem;
+  color:#FFAF02;
+  padding:0 0.5rem;
+  display:inline-block;
+  background:#fff;
+  &:active{
+    color:#FFAF02;
+  }
+  &.active{
+    border:1px solid transparent;
+    color:#fff;
+    background:#FFAF02;
+  }
+}
+
+.ui-btn-yellow-bd-xxl{
+  border:1px solid #FFAF02;
+  height:1.5rem;
+  line-height:1.5rem;
+  font-size:26px;
+  color:#FF7C25;
+  padding:0 0.7rem;
+  display:inline-block;
+  background:#fff;
+  &:active{
+    color:#FF7C25;
+  }
+  &.active{
+    border:1px solid transparent;
+    color:#fff;
+    background:#FFAF02;
+  }
+}
+
+
+
+.m-checkbox{
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    display: none
+  }
+  cursor: pointer;
+  input[type="radio"] + span {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background: url("../images/checkbox.jpg") no-repeat;
+    background-size:100%;
+  }
+  input[type="radio"]:checked + span {
+    background: url("../images/checked.jpg") no-repeat;
+    background-size:100%;
+  }
+}
+
+
+.disabled{
+  background: #ddd!important;
+}

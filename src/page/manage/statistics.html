@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>订单详情</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" href="../assets/css/page.manage.css" />
+    <style>
+        body{
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-statistics">
+            <!-- header start -->
+            @@include('../include/header.html',{
+                "title":"统计"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="m-manage-data">
+                    <div class="manage-data-hd">
+                        <div class="col-left">今日实收净额</div>
+                        <div class="col-right">
+                            <i class="icon icon-data"></i>
+                        </div>
+                    </div>
+                    <div class="manage-data-bd">
+                        <h1 class="ui-text">2490.00</h1>
+                    </div>
+                    <div class="manage-data-ft">
+                        <div class="col-left">共交易 129 笔</div>
+                        <div class="col-right">退款 1 笔</div>
+                    </div>
+                </div>
+                <div class="m-data-category">
+                    <ul class="ui-repeart">
+                        <li class="ui-repeart-item">
+                            <p class="ui-text">订单金额</p>
+                            <b class="ui-number">2520.00</b>
+                        </li>
+                        <li class="ui-repeart-item">
+                            <p class="ui-text">优惠券</p>
+                            <b class="ui-number">20.00</b>
+                        </li>
+                        <li class="ui-repeart-item">
+                            <p class="ui-text">退款金额</p>
+                            <b class="ui-number">10.00</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ui-line"></div>
+                <div class="m-moredata">
+                    <div class="moredata-hd">
+                        <div class="ui-title">分账统计情况</div>
+                    </div>
+                    <div class="moredata-bd">
+                        <ul class="ui-repeart">
+                            <li class="ui-repeart-item">
+                                <p class="ui-text">食堂费</p>
+                                <b class="ui-number">2400.00</b>
+                            </li>
+                            <li class="ui-repeart-item">
+                                <p class="ui-text">配餐费</p>
+                                <b class="ui-number">20.00</b>
+                            </li>
+                            <li class="ui-repeart-item">
+                                <p class="ui-text">送餐费</p>
+                                <b class="ui-number">10.00</b>
+                            </li>
+                            <li class="ui-repeart-item">
+                                <p class="ui-text">管理费</p>
+                                <b class="ui-number">20.00</b>
+                            </li>
+                            <li class="ui-repeart-item">
+                                <p class="ui-text">订单金额</p>
+                                <b class="ui-number">2520.00</b>
+                            </li>
+                            <li class="ui-repeart-item">
+                                <p class="ui-text">手续费</p>
+                                <b class="ui-number">20.00</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- container end   -->
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    @@include('../include/manage.footer.html')
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>我的信息</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.manage.css" />
+    <style>
+        body{
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-my-team">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "我的团队"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="m-myteam-data">
+                    <p class="ui-text">上周团队报酬</p>
+                    <h1 class="ui-number">100.00</h1>
+                </div>
+                <div class="">
+                    <!-- 管理者：我的团队列表 -->
+                    <ul class="ui-repeat repeat-myteam">
+                        <li class="ui-repeat-item myteam-hd">
+                            <label class="myteam-txt">在职人员</label>
+                            <label class="myteam-count">总人数14</label>
+                        </li>
+                        <li class="ui-repeat-item repeat-myteam-item">
+                            <div class="repeat-myteam-wap">
+                                <i class="thumb icon icon-main-big"></i>
+                                <div class="myteam-cont">
+                                    <div class="myteam-info">
+                                        <label class="info-name">李斌</label>
+                                        <label class="info-identity">管理员</label>
+                                    </div>
+                                    <div class="myteam-order-info">
+                                        <label class="order-info-date">上周需结报酬：28.00</label>
+                                    </div>
+                                    
+                                    <a href="tel:110" class="call-phone"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-repeat-item repeat-myteam-item">
+                            <div class="repeat-myteam-wap">
+                                <i class="thumb icon icon-main-big"></i>
+                                <div class="myteam-cont">
+                                    <div class="myteam-info">
+                                        <label class="info-name">李斌</label>
+                                        <label class="info-identity">管理员</label>
+                                    </div>
+                                    <div class="myteam-order-info">
+                                        <label class="order-info-date">上周需结报酬：28.00</label>
+                                    </div>
+                                    
+                                    <a href="tel:110" class="call-phone"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-repeat-item repeat-myteam-item">
+                            <div class="repeat-myteam-wap">
+                                <i class="thumb icon icon-main-big"></i>
+                                <div class="myteam-cont">
+                                    <div class="myteam-info">
+                                        <label class="info-name">李斌</label>
+                                        <label class="info-identity">管理员</label>
+                                    </div>
+                                    <div class="myteam-order-info">
+                                        <label class="order-info-date">上周需结报酬：28.00</label>
+                                    </div>
+                                    
+                                    <a href="tel:110" class="call-phone"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 管理者：我的团队列表 -->
+                </div>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

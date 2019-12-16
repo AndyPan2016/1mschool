@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>我的信息</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.manage.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-my-info">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "我的信息"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="list-block my-info-block">
+                    <ul class="no-wrap-border">
+                        <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">用户ID</div>
+                            <div class="item-after">9527</div>
+                        </div>
+                        </li>
+                        <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">我的学校</div>
+                            <div class="item-after">重庆大学</div>
+                        </div>
+                        </li>
+                        <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">真实姓名</div>
+                            <div class="item-after">李雷</div>
+                        </div>
+                        </li>
+                        <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">学号</div>
+                            <div class="item-after">9527</div>
+                        </div>
+                        </li>
+                        <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">手机号</div>
+                            <div class="item-after">13749928376</div>
+                        </div>
+                        </li>
+                        <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">入职时间</div>
+                            <div class="item-after">2018.03.04</div>
+                        </div>
+                        </li>
+                        <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title fc-999">职位</div>
+                            <div class="item-after">管理员</div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

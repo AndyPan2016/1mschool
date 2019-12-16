@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>我的账本</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.manage.css" />
+</head>
+<body>
+    
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-my-info">
+            <!-- header start -->
+            @@include('../include/header.html', {
+                "title": "我的账本"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <ul class="ui-repeat repeat-bill">
+                    <li class="ui-repeat-item bill-hd">
+                        <label class="bill-txt">总收入：23.00</label>
+                    </li>
+                    <li class="ui-repeat-item repeat-bill-item">
+                        <div class="repeat-bill-wap">
+                            <i class="thumb icon icon-income-1"></i>
+                            <div class="bill-cont">
+                                <div class="bill-info">
+                                    <label class="info-name">配餐收入</label>
+                                    <label class="info-rmb">+0.5元</label>
+                                </div>
+                                <div class="bill-order-info">
+                                    <label class="order-info-date">03.01 12:20</label>
+                                    <label class="order-info-number">订单号：1234567980000</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ui-repeat-item repeat-bill-item">
+                        <div class="repeat-bill-wap">
+                            <i class="thumb icon icon-income-2"></i>
+                            <div class="bill-cont">
+                                <div class="bill-info">
+                                    <label class="info-name">送餐收入</label>
+                                    <label class="info-rmb">+0.5元</label>
+                                </div>
+                                <div class="bill-order-info">
+                                    <label class="order-info-date">03.01 12:20</label>
+                                    <label class="order-info-number">订单号：1234567980000</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ui-repeat-item repeat-bill-item">
+                        <div class="repeat-bill-wap">
+                            <i class="thumb icon icon-pay"></i>
+                            <div class="bill-cont">
+                                <div class="bill-info">
+                                    <label class="info-name">退款</label>
+                                    <label class="info-rmb reduce">-0.5元</label>
+                                </div>
+                                <div class="bill-order-info">
+                                    <label class="order-info-date">03.01 12:20</label>
+                                    <label class="order-info-number">订单号：1234567980000</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!-- container end   -->
+
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

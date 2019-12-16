@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>订单详情</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" href="../assets/css/page.delivery.css" />
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-order">
+            <!-- header start -->
+            @@include('../include/header.html',{
+                "title":"订单详情"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="today-order-box">
+                    <!--search-->
+                    <div class="m-search">
+                        <div class="bar bar-header-secondary">
+                            <div class="searchbar">
+                                <a class="searchbar-cancel">取消</a>
+                                <div class="search-input">
+                                <label class="icon icon-search" for="search"></label>
+                                <input type="search" id='search' placeholder='输入关键字...'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--search end-->
+                    <!--tab-->
+                    <div class="m-tab">
+                        <div class="buttons-tab">
+                            <a href="#tab1" class="tab-link active button"><span class="ui-tab">配餐订单<i class="ui-icon">1</i></span></a>
+                            <a href="#tab2" class="tab-link button"><span class="ui-tab">送餐订单<i class="ui-icon">10</i></span></a>
+                        </div>
+                        <div class="content-block">
+                            <div class="tabs">
+                                <div id="tab1" class="tab active">
+                                    <div class="content-block">
+                                        <!-- 配送端：配餐订单列表 -->
+                                        <ul class="ui-repeat repeat-compound-food">
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <span class="order-datetime">
+                                                        <label class="col-lab">起配时间：</label>
+                                                        <label class="col-txt">12:09</label>
+                                                    </span>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="compound-food-cont">
+                                                    <div class="compound-food-item">
+                                                        <span class="food-name">
+                                                            <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                            鱼非鱼鱼非鱼
+                                                        </span>
+                                                        <span class="food-detail-remark">
+                                                            米饭等<label class="count">4</label>份
+                                                        </span>
+                                                    </div>
+                                                    <div class="compound-food-item">
+                                                        <span class="food-name">
+                                                            <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                            鱼非鱼鱼非鱼鱼非鱼
+                                                        </span>
+                                                        <span class="food-detail-remark">
+                                                            米饭等<label class="count">4</label>份
+                                                        </span>
+                                                    </div>
+                                    
+                                                    <a href="javascript:;" class="look-more">
+                                                        <label class="look-more-txt">查看更多</label>
+                                                        <i class="icon-look-more"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="compound-food-status">
+                                                    <span class="status-address">C10 503室</span>
+                                                    <span class="status-txt">已完成</span>
+                                                    <!-- 
+                                                    <span class="status-txt">已取消</span>
+                                                    <span class="status-txt refund">已退款</span>
+                                                    <a href="javascript:;" class="status-btn-look">查看原因</a>
+                                                    <a href="javascript:;" class="status-btn-complate">完成配餐</a> -->
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <span class="order-datetime">
+                                                        <label class="col-lab">起配时间：</label>
+                                                        <label class="col-txt">12:09</label>
+                                                    </span>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="compound-food-cont">
+                                                    <div class="compound-food-item">
+                                                        <span class="food-name">
+                                                            <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                            鱼非鱼
+                                                        </span>
+                                                        <span class="food-detail-remark">
+                                                            米饭等<label class="count">4</label>份
+                                                        </span>
+                                                    </div>
+                                                    <div class="compound-food-item">
+                                                        <span class="food-name">
+                                                            <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                            鱼非鱼
+                                                        </span>
+                                                        <span class="food-detail-remark">
+                                                            米饭等<label class="count">4</label>份
+                                                        </span>
+                                                    </div>
+                                    
+                                                    <a href="javascript:;" class="look-more">
+                                                        <label class="look-more-txt">查看更多</label>
+                                                        <i class="icon-look-more"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="compound-food-status">
+                                                    <span class="status-address">C10 503室</span>
+                                                    <a href="javascript:;" class="status-btn-complate">完成配餐</a>
+                                                    <!-- 
+                                                    <span class="status-txt">已取消</span>
+                                                    <span class="status-txt refund">已退款</span>
+                                                    <a href="javascript:;" class="status-btn-look">查看原因</a>
+                                                    <a href="javascript:;" class="status-btn-complate">完成配餐</a> -->
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <span class="order-datetime">
+                                                        <label class="col-lab">起配时间：</label>
+                                                        <label class="col-txt">12:09</label>
+                                                    </span>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="compound-food-cont">
+                                                    <div class="compound-food-item">
+                                                        <span class="food-name">
+                                                            <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                            鱼非鱼
+                                                        </span>
+                                                        <span class="food-detail-remark">
+                                                            米饭等<label class="count">4</label>份
+                                                        </span>
+                                                    </div>
+                                                    <div class="compound-food-item">
+                                                        <span class="food-name">
+                                                            <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                            鱼非鱼
+                                                        </span>
+                                                        <span class="food-detail-remark">
+                                                            米饭等<label class="count">4</label>份
+                                                        </span>
+                                                    </div>
+                                    
+                                                    <a href="javascript:;" class="look-more">
+                                                        <label class="look-more-txt">查看更多</label>
+                                                        <i class="icon-look-more"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="compound-food-status">
+                                                    <span class="status-address">C10 503室</span>
+                                                    <span class="status-txt refund">已退款</span>
+                                                    <!-- 
+                                                    <span class="status-txt">已取消</span>
+                                                    <span class="status-txt refund">已退款</span>
+                                                    <a href="javascript:;" class="status-btn-look">查看原因</a>
+                                                    <a href="javascript:;" class="status-btn-complate">完成配餐</a> -->
+                                                </div>
+                                            </li>
+                                            <li class="ui-repeat-item">
+                                                <div class="m-order-info">
+                                                    <span class="order-datetime">
+                                                        <label class="col-lab">起配时间：</label>
+                                                        <label class="col-txt">12:09</label>
+                                                    </span>
+                                                    <span class="order-number">
+                                                        <label class="col-lab">订单号：</label>
+                                                        <label class="col-txt">0987654321234</label>
+                                                    </span>
+                                                </div>
+                                                <div class="compound-food-cont">
+                                                    <div class="compound-food-item">
+                                                        <span class="food-name">
+                                                            <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                            鱼非鱼
+                                                        </span>
+                                                        <span class="food-detail-remark">
+                                                            米饭等<label class="count">4</label>份
+                                                        </span>
+                                                    </div>
+                                                    <div class="compound-food-item">
+                                                        <span class="food-name">
+                                                            <img src="../assets/images/icon/icon-main-big.png" class="thumb" />
+                                                            鱼非鱼
+                                                        </span>
+                                                        <span class="food-detail-remark">
+                                                            米饭等<label class="count">4</label>份
+                                                        </span>
+                                                    </div>
+                                    
+                                                    <a href="javascript:;" class="look-more">
+                                                        <label class="look-more-txt">查看更多</label>
+                                                        <i class="icon-look-more"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="compound-food-status">
+                                                    <span class="status-address">C10 503室</span>
+                                                    <span class="status-txt">已取消</span>
+                                                    <a href="javascript:;" class="status-btn-look">查看原因</a>
+                                                    <!-- 
+                                                    <span class="status-txt">已取消</span>
+                                                    <span class="status-txt refund">已退款</span>
+                                                    <a href="javascript:;" class="status-btn-look">查看原因</a>
+                                                    <a href="javascript:;" class="status-btn-complate">完成配餐</a> -->
+                                                </div>
+                                            </li>       
+                                        </ul>   
+                                        <!-- 配送端：配餐订单列表 -->
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab">
+                                    <div class="content-block">
+                                    <!-- 配送端：送餐订单列表 -->
+                                    <ul class="ui-repeat repeat-delivery-food">
+                                        <li class="ui-repeat-item">
+                                            <div class="m-order-info">
+                                                <span class="order-datetime">
+                                                    <label class="col-lab">起配时间：</label>
+                                                    <label class="col-txt">12:09</label>
+                                                </span>
+                                                <span class="order-number">
+                                                    <label class="col-lab">订单号：</label>
+                                                    <label class="col-txt">0987654321234</label>
+                                                </span>
+                                            </div>
+                                            <div class="delivery-food-cont">
+                                                <div class="delivery-address">C13 502室</div>
+                                                <div class="delivery-userinfo">
+                                                    李小林 美女
+                                                    <label class="userinfo-phone">17323386756</label>
+                                                </div>
+                                                <a href="tel:110" class="call-phone"></a>
+                                            </div>
+                                            <div class="delivery-food-status">
+                                                <span class="status-count">水饺5份</span>
+                                                <span class="status-txt">已取消</span>
+                                                <a href="javascript:;" class="status-btn-look">查看原因</a>
+                                                <!-- 
+                                                <span class="status-txt">已完成</span>
+                                                <span class="status-txt refund">已退款</span>
+                                                <a href="javascript:;" class="status-btn-look">查看原因</a>
+                                                <a href="javascript:;" class="status-btn-complate">完成配餐</a> -->
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="m-order-info">
+                                                <span class="order-datetime">
+                                                    <label class="col-lab">起配时间：</label>
+                                                    <label class="col-txt">12:09</label>
+                                                </span>
+                                                <span class="order-number">
+                                                    <label class="col-lab">订单号：</label>
+                                                    <label class="col-txt">0987654321234</label>
+                                                </span>
+                                            </div>
+                                            <div class="delivery-food-cont">
+                                                <div class="delivery-address">C13 502室</div>
+                                                <div class="delivery-userinfo">
+                                                    李小林 美女
+                                                    <label class="userinfo-phone">17323386756</label>
+                                                </div>
+                                                <a href="tel:110" class="call-phone"></a>
+                                            </div>
+                                            <div class="delivery-food-status">
+                                                <span class="status-count">水饺5份</span>
+                                                <!-- <a href="javascript:;" class="status-btn-look">查看原因</a> -->
+                                                <span class="status-txt refund">已退款</span>
+                                                <!-- 
+                                                <span class="status-txt">已完成</span>
+                                                <span class="status-txt refund">已退款</span>
+                                                <a href="javascript:;" class="status-btn-look">查看原因</a>
+                                                <a href="javascript:;" class="status-btn-complate">完成配餐</a> -->
+                                            </div>
+                                        </li>
+                                        <li class="ui-repeat-item">
+                                            <div class="m-order-info">
+                                                <span class="order-datetime">
+                                                    <label class="col-lab">起配时间：</label>
+                                                    <label class="col-txt">12:09</label>
+                                                </span>
+                                                <span class="order-number">
+                                                    <label class="col-lab">订单号：</label>
+                                                    <label class="col-txt">0987654321234</label>
+                                                </span>
+                                            </div>
+                                            <div class="delivery-food-cont">
+                                                <div class="delivery-address">C13 502室</div>
+                                                <div class="delivery-userinfo">
+                                                    李小林 美女
+                                                    <label class="userinfo-phone">17323386756</label>
+                                                </div>
+                                                <a href="tel:110" class="call-phone"></a>
+                                            </div>
+                                            <div class="delivery-food-status">
+                                                <span class="status-count">水饺5份</span>
+                                                <a href="javascript:;" class="status-btn-complate">完成配餐</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- 配送端：送餐订单列表 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tab 结束-->
+                </div>
+            </section>
+            <!-- container end   -->
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    @@include('../include/delivery.footer.html')
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+    <script type="text/javascript" src="../assets/scripts/plugins/monitor-keyboard.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var pm = new PhoneKeyboardMonitor();
+            if(pm.isAndroid){
+                var deliveryFooter = $('#j-delivery-footer');
+                pm.onShowKeyboard(function(){
+                    deliveryFooter.hide();
+                });
+                pm.onHideKeyboard(function(){
+                    deliveryFooter.show();
+                });
+            }
+        });
+        
+        $(".status-btn-complate").on("click",function(){
+            var modal = $.modal({
+                afterText:'请确保已完成送餐，否则会影响<br>报酬结算。' ,
+                buttons: [
+                    {
+                        text: '取消'
+                    },
+                    {
+                        text: '确认送达',
+                        onClick: function () {
+
+                        }
+                    },
+                ]
+            })
+        })
+    </script>
+</body>
+</html>

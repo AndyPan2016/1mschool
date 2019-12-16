@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>订单详情</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- build:css --> 
+    <link rel="stylesheet" href="../assets/css/plugins.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <!-- endbuild -->
+    <script type="text/javascript" src="../assets/scripts/plugins/adaptive.js"></script>
+    <script type="text/javascript">
+        window['adaptive'].desinWidth = 750; // 设计图宽度 
+        // window['adaptive'].maxWidth = 480;
+        window['adaptive'].baseFont = 14; // 没有缩放时的字体大小 
+        window['adaptive'].init(); // 调用初始化方法
+    </script>
+</head>
+<body>
+    <div class="page-group">
+        <div class="page page-current">
+            <header class="header">
+    <div class="header-wrap">
+        <a href="#" class="m-arrow-left">
+            <i class="icon icon-left"></i>
+            返回
+        </a>
+        <h1 class="m-title">@@title</h1>
+    </div>
+</header>
+            <!--search-->
+            <div class="m-search show-tip">
+                <div class="bar bar-header-secondary">
+                    <div class="searchbar">
+                        <a class="searchbar-cancel">取消</a>
+                        <div class="search-input">
+                            <label class="icon icon-search" for="search"></label>
+                            <input type="search" id='search' placeholder='输入关键字...'/>
+                            <a href="javascript:;" class="clear-inp j-clear-inp"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-nodata">搜索无结果，试试其他菜品吧！</div>
+            </div>
+            <!--search 结束-->
+            <!--用户端 start -->
+<footer class="footer">
+    <div class="m-toolbar">
+        <a class="m-toolbar-item active" href="#">
+            <i class="icon icon-main"></i>
+            <span>食堂订餐</span>
+        </a>
+        <a class="m-toolbar-item" href="#">
+            <i class="icon icon-note"></i>
+            <span>我的订单</span>
+        </a>
+        <a class="m-toolbar-item" href="#">
+            <i class="icon icon-me"></i>
+            <span>个人中心</span>
+        </a>
+    </div>
+</footer>
+<!--用户端 end -->
+        </div>
+    </div>
+    <!-- build:scripts -->
+    <script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/sm.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/sm-extend.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+        $(function(){
+            $('#search').focus(function(){
+                var target = $(this);
+                var clearBtn = target.parent().find('.j-clear-inp').addClass('show');
+                if(!clearBtn.attr('is-bind')){
+                    clearBtn.click(function(){
+                        target.val('').focus();
+                    }).attr('is-bind', true);
+                }
+            }).blur(function(){
+                $(this).parent().find('.j-clear-inp').removeClass('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

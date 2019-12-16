@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <title>订单详情</title>
+    @@include('../include/base.page.top.html')
+    <link rel="stylesheet" href="../assets/css/page.delivery.css" />
+    <style>
+        body{
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- wrapper start -->
+    <section class="wrapper">
+        <!-- page-wrap start -->
+        <section class="page-wrap page-order">
+            <!-- header start -->
+            @@include('../include/header.html',{
+                "title":"我的"
+            })
+            <!-- header end   -->
+
+            <!-- container start -->
+            <section class="container">
+                <div class="m-mybg">
+                    <div class="m-myinformation">
+                        <div class="col-left">
+                            <i class="icon icon-main-big head-portrait"></i>
+                        </div>
+                        <div class="col-left">
+                            <span class="ui-block">
+                                <h3 class="my-name">小不点儿</h3>
+                                <p class="my-id">ID：098765546</p>
+                            </span>
+                            <span class="ui-block">
+                                <p class="my-job">管理员</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-mydata">
+                    <span class="col-left">
+                        <h3 class="big-data">20.00</h3>
+                        <p class="data-name">本日团队报酬</p>
+                    </span>
+                    <span class="col-right">
+                        <h3 class="big-data">120.00</h3>
+                        <p class="data-name">上周团队报酬<i class="icon icon-right"></i></p>
+                    </span>
+                </div>
+                <div class="m-list">
+                    <div class="list-block">
+                        <ul class="no-border">
+                            <li class="item-content item-link">
+                                <div class="item-media"><i class="icon icon-book"></i></div>
+                                <a href="javascript:;" class="item-inner">
+                                    <div class="item-title">我的账本</div>
+                                </a>
+                            </li>
+                            <li class="item-content item-link">
+                                <div class="item-media"><i class="icon icon-note-1"></i></div>
+                                <a href="javascript:;" class="item-inner">
+                                    <div class="item-title">历史配送订单</div>
+                                </a>
+                            </li>
+                            <li class="item-content item-link">
+                                <div class="item-media"><i class="icon icon-myteam"></i></div>
+                                <a href="javascript:;" class="item-inner">
+                                    <div class="item-title">我的团队</div>
+                                </a>
+                            </li>
+                            <li class="item-content item-link">
+                                <div class="item-media"><i class="icon icon-lock-small"></i></div>
+                                <a href="javascript:;" class="item-inner">
+                                    <div class="item-title">修改密码</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- container end   -->
+        </section>
+        <!-- page-wrap end   -->
+    </section>
+    @@include('../include/manage.footer.html')
+    <!-- wrapper end  -->
+    @@include('../include/base.page.bottom.html')
+</body>
+</html>

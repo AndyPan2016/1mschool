@@ -1,0 +1,618 @@
+@charset "UTF-8";
+/**
+ * 列表
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-05-29 17:26:59
+ */
+
+@import "_mixins.less";
+
+
+.my-repeat-item(){
+	height: auto;
+	padding: 0 @n30;
+	margin-bottom: @n40;
+	background: @color-ffffff;
+}
+.ui-repeat{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	.ui-repeat-item{
+
+		.compound-food-cont, .delivery-food-cont, .order-history-cont{
+			border-top: 1px solid @color-dddddd;
+			border-bottom: 1px solid @color-dddddd;
+			padding-top: 10px;
+			overflow: hidden;
+			position: relative;
+
+			.compound-food-item, .order-food-item{
+				.clearfix();
+				height: 82px;
+				line-height: 82px;
+				overflow: hidden;
+				position: relative;
+				.food-name{
+					float: left;
+					font-size: @font-34;
+					color: @color-333333;
+					padding-left: 60px;
+					position: relative;
+					max-width: 300px;
+					.text-overflow();
+				}
+				.thumb{
+					width: 40px;
+					height: 40px;
+					.border-radius(50%);
+					overflow: hidden;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					margin-top: -23px;
+					display: inline-block;
+				}
+				.food-detail-remark{
+					float: right;
+					font-size: @font-28;
+					color: @color-999999;
+					.count{
+						font-size: @font-32;
+						color: @color-333333;
+						padding: 0 5px;
+					}
+				}
+			}
+		}
+
+		.compound-food-status, .delivery-food-status{
+			@h: 100px;
+			height: @h;
+			.status-address, .status-count{
+				float: left;
+				height: @h;
+				line-height: @h;
+				font-size: @font-32;
+				color: @color-666666;
+				max-width: 60%;
+				.text-overflow();
+			}
+			.status-txt{
+				float: right;
+				height: @h;
+				line-height: @h;
+				font-size: @font-30;
+				color: @color-666666;
+				&.refund{
+					color: @color-ff2525;
+				}
+			}
+			.status-btn-look{
+				float: right;
+				height: @h;
+				line-height: @h;
+				font-size: @font-30;
+				color: @brand-primary;
+			}
+			.status-btn-complate{
+				float: right;
+				height: @h;
+				line-height: @h;
+				font-size: @font-30;
+				color: @color-ffffff;
+				background: @brand-primary;
+				padding: 0 60px;
+				margin-right: -30px;
+			}
+		}
+		
+		.call-phone{
+			width: 100px;
+			height: 40px;
+			border-left: 1px solid @color-dddddd;
+			background: url(../images/icon/icon-call-phone.png) center right no-repeat;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			margin-top: -20px;
+			background-size: auto 100%;
+		}
+	}
+
+	/*优惠券*/
+	&.repeat-coupon{
+		.ui-repeat-item{
+			.my-repeat-item();
+			background: none;
+			.repeat-coupon-cont{
+				display: block;
+				margin: 30px auto;
+				padding: 30px;
+				.border-radius(30px);
+				.clearfix();
+				background: @color-ffffff;
+				.box-shadow(0px 0px 30px @color-dddddd);
+				&.disabled{
+					.coupon-name{
+						color: @color-bbbbbb;
+					}
+					.coupon-info{
+						.coupon-info-detail{
+							color: @color-bbbbbb;
+						}
+						.coupon-info-date{
+							color: @color-bbbbbb;
+						}
+					}
+				}
+				.coupon-name{
+					display: inline-block;
+					height: 100px;
+					float: left;
+					border-right: 1px solid @color-dddddd;
+					color: @brand-primary;
+					width: 200px;
+					.coupon-rmb{
+						display: block;
+						height: 60px;
+						line-height: 60px;
+						padding-left: 5px;
+						text-align: left;
+						font-size: @font-50;
+						font{
+							font-size:@font-36; 
+						}
+					}
+					.name-txt{
+						display: block;
+						font-size: @font-30;
+						padding-left: 40px;
+					}
+				}
+				.coupon-info{
+					display: inline-block;
+					height: 100px;
+					float: left;
+					margin-left: 20px;
+					.coupon-info-detail{
+						display: block;
+						color: @color-333333;
+						font-size: @font-28;
+						margin-top: 10px;
+						.overdue{
+							float: right;
+							font-weight: bold;
+						}
+					}
+					.coupon-info-date{
+						display: block;
+						color: @color-999999;
+						font-size: @font-22;
+						margin-top: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	/*配餐列表*/
+	&.repeat-compound-food{
+		.ui-repeat-item{
+			.my-repeat-item();
+			.compound-food-cont{
+				padding-bottom: 45px;
+				max-height: 223px;
+
+				&.active{
+					max-height: initial;
+					.look-more{
+						.look-more-txt{
+							&:nth-child(1){
+								display: none;
+							}
+							&:nth-child(2){
+								display: inline-block;
+							}
+						}
+						.icon-look-more{
+							.rotate(180deg);
+						}
+					}
+				}
+				&.show{
+					max-height: initial;
+					.look-more{
+						display: none;
+					}
+				}
+				
+				.look-more{
+					background: @color-ffffff;
+					position: absolute;
+					color: @color-666666;
+					width: 100%;
+					height: 60px;
+					line-height: 60px;
+					text-align: center;
+					left: 0;
+					bottom: 0px;
+					.look-more-txt{
+						font-size: 24px;
+						&:nth-child(2){
+							display: none;
+						}
+					}
+					.icon-look-more{
+						display: inline-block;
+						width: 21px;
+						height: 12px;
+						background: url(../images/icon/icon-look-more.png) 0 0 no-repeat;
+						background-size: 100% 100%;
+						margin-bottom: 4px;
+						margin-left: 10px;
+						.transition(all .2s ease);
+					}
+				}
+			}
+		}
+	}
+	/*送餐订单列表*/
+	&.repeat-delivery-food, &.repeat-myaddress{
+		.ui-repeat-item{
+			.my-repeat-item();
+			.delivery-food-cont{
+				padding: 10px 0;
+				.delivery-address, .delivery-userinfo{
+					height: 62px;
+					line-height: 63px;
+					color: @color-333333;
+					font-size: @font-40;
+					.text-overflow();
+				}
+				.delivery-userinfo{
+					font-size: @font-30;
+					.userinfo-phone{
+						font-size: @font-28;
+						color: @color-999999;
+						margin-left: 60px;
+					}
+				}
+			}
+		}
+	}
+	&.repeat-myaddress{
+		.ui-repeat-item{
+			.my-repeat-item();
+			margin-bottom: 0;
+			position: relative;
+			padding: 0;
+			.repeat-item-wrap{
+				position: relative;
+				z-index: 1;
+				padding: 0 @n30;
+				background: @color-ffffff;
+				margin-left: 0;
+				
+				&.transition{
+					.transition(all .2s ease);
+				}
+				&.active{
+					margin-right: 150px;
+					margin-left: -150px;
+				}
+			}
+			.delivery-food-cont{
+				border-top: none;
+				.delivery-address, .delivery-userinfo{
+					font-size: @font-30;
+					padding-right: 130px;
+					position: relative;
+					.text-overflow();
+					.type{
+						position: absolute;
+						left: 220px;
+						top: 0;
+						color: @color-5ddabb;
+					}
+				}
+				.delivery-userinfo{
+					.userinfo-phone{
+						color: @color-333333;
+					}
+				}
+				.btn-edit{
+					display: inline-block;
+					width: 40px;
+					height: 37px;
+					position: absolute;
+					right: 20px;
+					top: 50%;
+					margin-top: -18px;
+					background: url(../images/icon/icon-address-edit.png) center center no-repeat;
+					background-size: 100%;
+				}
+			}
+			.btn-del{
+				display: inline-block;
+				width: 150px;
+				height: 100%;
+				background: @color-ff2525;
+				position: absolute;
+				top: 0;
+				right: 0;
+				.icon-btn-delete{
+					background: url(../images/icon/icon-btn-delete.png) center center no-repeat;
+					display: inline-block;
+					width: 100%;
+					height: 40px;
+					background-size: auto 100%;
+					margin-top: 35px;
+					margin-bottom: 10px;
+				}
+				.del-txt{
+					display: inline-block;
+					width: 100%;
+					text-align: center;
+					font-size: @font-24;
+					color: @color-ffffff;
+				}
+			}
+		}
+	}
+	/*管理者：进行中列表*/
+	
+	.order-status{
+		float: right;
+		height: 90px;
+		line-height: 90px;
+		color: @brand-primary;
+		padding-right: 30px;
+		background: url(../images/icon/icon-order-status.png) center right no-repeat;
+		background-size: 10px 17px;
+		
+		&.complate{
+			color: @color-999999;
+			background: none;
+			padding-right: 0;
+		}
+	}
+	&.repeat-order-history, &.repeat-myorder{
+		.ui-repeat-item{
+			.my-repeat-item();
+			.m-order-info{
+				.order-number{
+					float: left;
+				}
+			}
+			.order-history-cont{
+				border-bottom: none;
+				padding-bottom: 20px;
+				.order-food-item{
+					padding-left: 60px;
+					.thumb{
+						top: 18px;
+						margin: 0;
+					}
+					.food-name{
+						display: block;
+						float: initial;
+						padding: 0;
+					}
+				}
+				.food-detail-remark{
+					display: block;
+					padding-left: 60px;
+					color: @color-666666;
+					font-size: @font-26;
+					.count{
+						padding: 0 5px;
+					}
+				}
+				.show-detail{
+					display: inline-block;
+					height: 60px;
+					line-height: 60px;
+					margin-left: 60px;
+					font-size: @font-40;
+					color: @color-666666;
+				}
+				.amount-payment{
+					position: absolute;
+					right: 0;
+					bottom: 20px;
+					color: @color-5c4e40;
+					font-size: @font-28;
+				}
+			}
+		}
+	}
+	&.repeat-myorder{
+		.ui-repeat-item{
+			.my-repeat-item();
+			.m-order-info{
+				border-bottom: 1px solid #ddd;
+				.order-status{
+					&.fc-black{
+						color: @color-333333;
+					}
+					&.complate{
+						color: @color-999999;
+					}
+				}
+			}
+			.order-history-cont{
+				position: relative;
+				.order-status{
+					color: @color-333333;
+					font-size: @font-30;
+					&.complate{
+						color: @color-999999;
+					}
+				}
+				.amount-payment{
+					color: @color-333333;
+				}
+			}
+			.myorder-handle{
+				border-top: 1px solid @color-dddddd;
+				height: 110px;
+				line-height: 110px;
+				text-align: right;
+				.tel-btn{
+					display: inline-block;
+					width: 160px;
+					height: 60px;
+					line-height: 60px;
+					text-align: center;
+					border: 1px solid @brand-primary;
+					font-size: @font-26;
+					color: @brand-primary;
+					.border-radius(10px);
+					margin-left: 40px;
+					&.dinning{
+						background: @brand-primary;
+						color: @color-ffffff;
+					}
+				}
+			}
+		}
+	}
+
+	/*配送端：我的账本列表*/
+	&.repeat-bill, &.repeat-myteam{
+		.ui-repeat-item{
+			.my-repeat-item();
+			margin: 0;
+			.repeat-bill-wap, .repeat-myteam-wap{
+				position: relative;
+			}
+			&.bill-hd, &.myteam-hd{
+				height: 80px;
+				background: @color-fafafa;
+				.bill-txt, .myteam-txt{
+					display: inline-block;
+					height: 80px;
+					line-height: 80px;
+					font-size: @font-24;
+					color: @color-666666;
+				}
+				.icon-term-filter{
+					display: inline-block;
+					width: 38px;
+					height: 80px;
+					float: right;
+					background: url(../images/icon/icon-term-filter.png) center center no-repeat;
+					background-size: 100% auto;
+				}
+			}
+			&.repeat-bill-item, &.repeat-myteam-item{
+				.repeat-bill-wap, .repeat-myteam-wap{
+					border-bottom: 1px solid @color-dddddd;
+				}
+				&:last-child{
+					.repeat-bill-wap, .repeat-myteam-wap{
+						border: none;
+					}
+				}
+			}
+			.thumb{
+				width: 60px;
+				height: 60px;
+				.border-radius(50%);
+				position: absolute;
+				top: 30px;
+				left: 0;
+			}
+			.bill-cont, .myteam-cont{
+				margin-left: 100px;
+				padding-top: 30px;
+				padding-bottom: 20px;
+				.bill-info, .myteam-info{
+					font-size: @font-28;
+					color: @color-333333;
+					.clearfix();
+					.info-name{
+						float: left;
+					}
+					.info-rmb{
+						float: right;
+						&.reduce{
+							color: @color-ff2525;
+						}
+					}
+				}
+				.bill-order-info, .myteam-order-info{
+					margin-top: 10px;
+					font-size: @font-28;
+					color: @color-999999;
+					.clearfix();
+					.order-info-number{
+						float: right;
+					}
+				}
+			}
+		}
+	}
+	&.repeat-myteam{
+		.ui-repeat-item{
+			.my-repeat-item();
+			margin: 0;
+			&.myteam-hd{
+				height: 110px;
+				background: @color-ffffff;
+				.myteam-txt{
+					height: 110px;
+					line-height: 110px;
+					font-size: @font-28;
+					color: @color-333333;
+				}
+				.myteam-count{
+					margin-left: 30px;
+					font-size: @font-24;
+					color: @color-666666;
+				}
+			}
+			&.repeat-myteam-item{
+				.repeat-myteam-wap{
+					.myteam-cont{
+						.myteam-info{
+							.info-identity{
+								font-size: @font-26;
+								color: @color-666666;
+								margin-left: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.m-order-info{
+	@h: 90px;
+	display: block;
+	height: @h;
+	color: @color-333333;
+	font-size: @font-28;
+	.order-datetime{
+		float: left;
+		height: @h;
+		line-height: @h;
+		.col-lab{
+			color: @color-999999;
+			font-size: @font-26;
+		}
+		.col-txt{
+			font-size: @font-36;
+		}
+	}
+	.order-number{
+		float: right;
+		height: @h;
+		line-height: @h;
+	}
+
+}
+

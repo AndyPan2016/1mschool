@@ -1,0 +1,202 @@
+/**
+ * 背景图标
+ * @path: 背景图标路径，不包括后缀名
+ * @width: 图标元素宽度
+ * @height: 图标元素高度
+ * @type: 图片大小
+ */
+.fn-icon(@name, @width, @height,@type:contain){
+  background: url('../images/icon/@{name}.png') no-repeat;
+  width: @width;
+  height: @height;
+  background-size: @type;
+}
+
+.icon-location-big {
+  .fn-icon('icon-location-big',2.5rem,2.5rem);
+}
+
+.icon-location-smaller {
+  .fn-icon('icon-location-smaller',1rem,1rem);
+}
+
+.icon-search {
+  .fn-icon('icon-search',0.85rem,0.85rem);
+  &:before{
+    content: '';
+  }
+}
+
+.icon-all {
+  .fn-icon('icon-all',2.25rem, 2.25rem);
+}
+
+.icon-meal-1 {
+  .fn-icon('icon-meal-1', 2.25rem, 2.25rem);
+}
+
+.icon-meal-2 {
+  .fn-icon('icon-meal-2', 2.25rem, 2.25rem);
+}
+
+.icon-meal-3 {
+  .fn-icon('icon-meal-3', 2.25rem, 2.25rem);
+}
+
+.icon-meal-4 {
+  .fn-icon('icon-meal-4', 2.25rem, 2.25rem);
+}
+
+.icon-meal-5 {
+  .fn-icon('icon-meal-5', 2.25rem, 2.25rem);
+}
+
+.icon-meal-6 {
+  .fn-icon('icon-meal-6', 2.25rem, 2.25rem);
+}
+
+.icon-meal-7 {
+  .fn-icon('icon-meal-7', 2.25rem, 2.25rem);
+}
+
+.icon-cart {
+  .fn-icon('icon-cart', 2.5rem, 2.5rem);
+  &:before{
+    content:'';
+  }
+}
+.icon-service-no{
+  .fn-icon('icon-serviceNO', 2.25rem, 2.25rem);
+}
+.icon-wpay{
+  .fn-icon("icon-wpay", 1.25rem, 1.25rem);
+}
+.icon-alipay{
+  .fn-icon("icon-alipay", 1.25rem, 1.25rem);
+}
+.icon-main{
+  .fn-icon("icon-main", 1.35rem, 1.35rem);
+  &.active{
+    .fn-icon("icon-main-active", 1.35rem, 1.35rem);
+  }
+}
+.icon-note{
+  .fn-icon("icon-note", 1.35rem, 1.35rem);
+  &.active{
+    .fn-icon("icon-note-active", 1.35rem, 1.35rem);
+  }
+}
+.icon-me{
+  .fn-icon("icon-me", 1.35rem, 1.35rem);
+  &.active{
+    .fn-icon("icon-me-active", 1.35rem, 1.35rem);
+  }
+  &:before{
+    content:'';
+  }
+}
+.icon-open{
+  .fn-icon("icon-open", 2.375rem, 1.4rem);
+}
+.icon-close{
+  .fn-icon("icon-close", 2.375rem, 1.4rem);
+}
+.icon-card{
+  .fn-icon("icon-card", 1.3rem, 1.3rem);
+  &:before{
+    content:'';
+  }
+}
+.icon-location-small{
+  .fn-icon("icon-location-small", 1.3rem, 1.3rem);
+}
+.icon-help{
+  .fn-icon("icon-help", 1.3rem, 1.3rem);
+}
+.icon-suggest{
+  .fn-icon("icon-suggest", 1.3rem, 1.3rem);
+}
+.icon-right{
+  color:#bbb;
+}
+.icon-user{
+  .fn-icon("icon-user", 1rem, 1rem);
+}
+.icon-lock-smaller{
+  .fn-icon("icon-lock-smaller", 1rem, 1rem);
+}
+.icon-income-1{
+  .fn-icon("icon-income-1", 1.5rem, 1.5rem);
+}
+.icon-income-2{
+  .fn-icon("icon-income-2", 1.5rem, 1.5rem);
+}
+.icon-pay{
+  .fn-icon("icon-pay", 1.5rem, 1.5rem);
+}
+.icon-scan{
+  .fn-icon("icon-scan", 4.025rem, 4.025rem);
+}
+.icon-qr{
+  .fn-icon("icon-qr", 1.25rem, 1.25rem);
+  &.active{
+    .fn-icon("icon-qr-active", 1.25rem, 1.25rem);
+  }
+}
+.icon-enter{
+  .fn-icon("icon-enter", 1.25rem, 1.25rem);
+  &.active{
+    .fn-icon("icon-enter-active", 1.25rem, 1.25rem);
+  }
+}
+.icon-book{
+  .fn-icon("icon-book", 1.3rem, 1.3rem);
+}
+.icon-note-1{
+  .fn-icon("icon-note-1", 1.3rem, 1.3rem);
+}
+.icon-lock-small{
+  .fn-icon("icon-lock-small", 1.3rem, 1.3rem);
+}
+.icon-main-big{
+  .fn-icon("icon-main-big", 2.25rem, 2.25rem);
+}
+.icon-statistics{
+  .fn-icon("icon-statistics", 1.35rem, 1.35rem);
+  &.active{
+    .fn-icon("icon-statistics-active", 1.35rem, 1.35rem);
+  }
+}
+.icon-phone{
+  .fn-icon("icon-phone", 0.925rem, 1rem);
+  &:before{
+    content:'';
+  }
+}
+.icon-myteam{
+  .fn-icon("icon-myteam", 1.3rem, 1.3rem);
+}
+
+.icon-qrcode-close{
+  .fn-icon("icon-qrcode-close", 161px, 161px);
+}
+
+.icon-data{
+  .fn-icon("icon-data", 40px, 37px);
+}
+
+.icon-address{
+  .fn-icon("icon-address", 22px, 28px);
+}
+.icon-search-loc{
+  .fn-icon("icon-search-loc", 31px, 40px);
+}
+.icon-like{
+  .fn-icon("icon-like", 22px, 31px);
+}
+.icon-alipay{
+  .fn-icon("icon-alipay", 50px, 50px);
+}
+.icon-wechat{
+  .fn-icon("icon-wechat", 50px, 50px);
+}
