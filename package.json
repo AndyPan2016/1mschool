@@ -16,10 +16,10 @@
     "author": "GuoBa.Z",
     "license": "ISC",
     "dependencies": {
-        "live-server": "^1.2.0"
+        "live-server": "^1.2.2"
     },
     "devDependencies": {
-        "browser-sync": "^2.23.7",
+        "browser-sync": "^2.27.11",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-changed": "^3.2.0",
